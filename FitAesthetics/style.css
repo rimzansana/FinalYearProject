@@ -103,3 +103,61 @@ justify-content: center;
     display: flex;
     flex-direction: row;
 }
+
+/* Log in Modal styling */
+
+.l-mod{
+   width: 20rem;
+   height : 15rem;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+
+.mod-settings{
+    height: 30rem;
+    display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+
+.modal-main-settings{
+    width: 30rem;
+
+}
+
+.input-sizing{
+    width:20rem;
+    height:2.5rem;
+}
+
+.link-textcolor{
+    text-decoration: none;
+    color: #D32F2F;
+}
+
+/* Sign up Modal styling */
+
+#n-mod{
+   width: 20rem;
+   height :20rem;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+
+/* Reset Modal styling */
+
+#hod-settings{
+ height: 13rem;
+    display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+
+#h-mod{
+   width: 20rem;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
