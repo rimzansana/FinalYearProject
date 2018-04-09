@@ -18,6 +18,11 @@ body{
     color: #D32F2F;
 }
 
+#text-decoration-none{
+    text-decoration: none;
+
+}
+
 
 /* Navbar styling */
 
@@ -104,17 +109,9 @@ justify-content: center;
     flex-direction: row;
 }
 
-/* Log in Modal styling */
+/* Common Modal styling */
 
-.l-mod{
-   width: 20rem;
-   height : 15rem;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-}
-
-.mod-settings{
+.modal-settings{
     height: 30rem;
     display: flex;
    flex-direction: column;
@@ -126,19 +123,26 @@ justify-content: center;
 
 }
 
-.input-sizing{
+.form-button-size{
     width:20rem;
     height:2.5rem;
 }
 
-.link-textcolor{
-    text-decoration: none;
-    color: #D32F2F;
+
+/* Log in Modal styling */
+
+#login-modal-form{
+   width: 20rem;
+   height : 15rem;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
 }
+
 
 /* Sign up Modal styling */
 
-#n-mod{
+#signup-modal-form{
    width: 20rem;
    height :20rem;
    display: flex;
@@ -148,14 +152,14 @@ justify-content: center;
 
 /* Reset Modal styling */
 
-#hod-settings{
+#reset-content-settings{
  height: 13rem;
     display: flex;
    flex-direction: column;
    justify-content: center;
 }
 
-#h-mod{
+#reset-modal-form{
    width: 20rem;
    display: flex;
    flex-direction: column;
