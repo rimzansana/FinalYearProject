@@ -95,3 +95,11 @@ justify-content: center;
      margin: 0rem;
      padding: 2.5rem;
 }
+
+
+/* Footer styling */
+
+#info-text-settings{
+    display: flex;
+    flex-direction: row;
+}
