@@ -19,7 +19,7 @@
 
     <div className="Main-Container">
 
-    <!-- Navbar Component -->
+<!-- Navbar Component -->
 
     <nav class="navbar navbar-expand-lg navbar-light" id="nav-container">
         <a class="navbar-brand white-text-color" href="#">FitAesthetics.LK</a>
@@ -47,7 +47,7 @@
         </div>
     </nav>
 
-    <!-- Seacrh Bar Component -->
+<!-- Seacrh Bar Component -->
 
     <div class="jumbotron jumbotron-fluid search-container">
 
@@ -70,7 +70,7 @@
      </div>
 
 
-     <!-- Featured Trainer Component -->
+<!-- Featured Trainer Component -->
 
     <div class="featured-trainers">
 
@@ -123,7 +123,7 @@
         </div>
     </div>
 
-     <!-- Trainer sign up Component -->
+<!-- Trainer sign up Component -->
 
 
     <div class="jumbotron jumbotron-fluid search-container">
@@ -141,81 +141,88 @@
     </div>
 
 
-         <!-- Review slider Component -->
+<!-- Review slider Component -->
 
-    <div class="carousel slide" data-ride="carousel">
+    <div id="review-header-container">
+        <h1 class="display-5 text-center red-text-color">Our Clients</h1>
+        <p class="lead text-center">Say About our Trainers</p>
+    </div>
 
-        <div className="carousel-inner" id="slider-container">
+
+    <div id="carouselMovement" class="carousel slide" data-ride="carousel">
+
+        <div class="carousel-inner" id="slider-container">
 
           <div class="carousel-item active">
-                <div className="d-flex justify-content-center">
-                    <img src="./src/images/Profile-1.jpg" alt="Picture one" className="rounded-circle" id="pro-settings" />
+                <div class="d-flex justify-content-center">
+                    <img src="images/Profile-1.jpg" alt="Picture one" class="rounded-circle review-picture-settings" />
                 </div>
 
                 <div>
-                    <h5 className="d-flex justify-content-center my-3">Rimzan Sadikeen</h5>
-                    <p className="d-flex justify-content-center mb-5">Colombo</p>
+                    <h5 class="d-flex justify-content-center my-3">Rimzan Sadikeen</h5>
+                    <p class="d-flex justify-content-center mb-5">Colombo</p>
                     <br />
                 </div>
 
-                <div className="d-flex justify-content-center ml-3 mr-2">
-                    <div id="r-div">
-                        <p className="text-center">"He asks how I am doing, demonstrates the movements for weightlifting or anything I am uncomfortable with, and pushes me to do that one extra rep! Time, money, and sweat well spent!"</p>
+                <div class="d-flex justify-content-center ml-3 mr-2">
+                    <div class="review-text-div">
+                        <p class="text-center">"He asks how I am doing, demonstrates the movements for weightlifting or anything I am uncomfortable with, and pushes me to do that one extra rep! Time, money, and sweat well spent!"</p>
                     </div>
                 </div>
           </div>
 
 
+
           <div class="carousel-item">
-                <div className="d-flex justify-content-center">
-                    <img src="./src/images/Profile-2.jpg" alt="Picture one" className="rounded-circle" id="pro-settings" />
+                <div class="d-flex justify-content-center">
+                    <img src="images/Profile-2.jpg" alt="Picture one" class="rounded-circle review-picture-settings"  />
                 </div>
 
                 <div>
-                    <h5 className="d-flex justify-content-center my-3">Rimzan Sadikeen</h5>
-                    <p className="d-flex justify-content-center mb-5">Colombo</p>
+                    <h5 class="d-flex justify-content-center my-3">Rimzan Sadikeen</h5>
+                    <p class="d-flex justify-content-center mb-5">Colombo</p>
                     <br />
                 </div>
 
-                <div className="d-flex justify-content-center ml-3 mr-2">
-                    <div id="r-div">
-                        <p className="text-center">"He asks how I am doing, demonstrates the movements for weightlifting or anything I am uncomfortable with, and pushes me to do that one extra rep! Time, money, and sweat well spent!"</p>
+                <div class="d-flex justify-content-center ml-3 mr-2">
+                    <div class="review-text-div">
+                        <p class="text-center">"He asks how I am doing, demonstrates the movements for weightlifting or anything I am uncomfortable with, and pushes me to do that one extra rep! Time, money, and sweat well spent!"</p>
                     </div>
                 </div>
           </div>
 
           <div class="carousel-item">
-                <div className="d-flex justify-content-center">
-                    <img src="./src/images/Profile-3.jpg" alt="Picture one" className="rounded-circle" id="pro-settings" />
+                <div class="d-flex justify-content-center">
+                    <img src="images/Profile-3.jpg" alt="Picture one" class="rounded-circle review-picture-settings" />
                 </div>
 
                 <div>
-                    <h5 className="d-flex justify-content-center my-3">Rimzan Sadikeen</h5>
-                    <p className="d-flex justify-content-center mb-5">Colombo</p>
+                    <h5 class="d-flex justify-content-center my-3">Rimzan Sadikeen</h5>
+                    <p class="d-flex justify-content-center mb-5">Colombo</p>
                     <br />
                 </div>
 
-                <div className="d-flex justify-content-center ml-3 mr-2">
-                    <div id="r-div">
-                      <p className="text-center">"He asks how I am doing, demonstrates the movements for weightlifting or anything I am uncomfortable with, and pushes me to do that one extra rep! Time, money, and sweat well spent!"</p>
+                <div class="d-flex justify-content-center ml-3 mr-2">
+                    <div class="review-text-div">
+                        <p class="text-center">"He asks how I am doing, demonstrates the movements for weightlifting or anything I am uncomfortable with, and pushes me to do that one extra rep! Time, money, and sweat well spent!"</p>
                     </div>
                 </div>
           </div>
 
         </div>
 
-        <a className="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <a class="carousel-control-prev" href="#carouselMovement" role="button" data-slide="prev">
             <span>
-                <img src="./src/images/Chevron-left.png" alt="icon name" className="mb-5"/>
+                <img src="images/Chevron-left.png" alt="icon name" class="mb-5"/>
             </span>
-            <span className="sr-only">Previous</span>
+            <span class="sr-only">Previous</span>
         </a>
 
-        <a className="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        <a class="carousel-control-next" href="#carouselMovement" role="button" data-slide="next">
             <span>
-              <img src="./src/images/Chevron-right.png" alt="icon name" className="mb-5"/>
+              <img src="images/Chevron-right.png" alt="icon name" class="mb-5"/>
             </span>
-            <span className="sr-only">Next</span>
+            <span class="sr-only">Next</span>
         </a>
 
     </div>
