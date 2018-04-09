@@ -23,15 +23,15 @@ body{
     box-shadow: 0 0.01rem 0.5rem;
 }
 
+/* Search Bar styling */
 
-#search-container
+.search-container
 {
 background-color: black;
 height: 30rem !important;
 display: flex;
 flex-direction: column;
 justify-content: center;
-
 }
 
 #search-content{
@@ -49,5 +49,21 @@ justify-content: center;
 #search-button{
     height: 3.7rem;
     width: 6rem;
+}
 
+/* Trainer sign up styling */
+
+#signup-content{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+#trainer-container{
+margin: 0rem;
+background-color: black;
+height: 30rem !important;
+display: flex;
+flex-direction: column;
+justify-content: center;
 }
