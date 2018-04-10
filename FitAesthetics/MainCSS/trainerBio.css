@@ -33,4 +33,28 @@ width: 4rem;
 }
 
 
-/* Profile Picture styles */
+/* Bio Body styles */
+
+#bio-body-height{
+    height: 50rem;
+}
+
+.image-prop{
+    width: 4rem;
+    height:4rem;
+}
+
+
+/* Bio Booking box styles */
+
+#booking-box-settings{
+    height: 25rem;
+  
+}
+
+#sticky{
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+
+}
