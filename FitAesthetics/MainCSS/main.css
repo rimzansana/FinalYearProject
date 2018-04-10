@@ -1,10 +1,11 @@
 @import url("index.css");
 @import url("trainerSignup.css");
+@import url("search.css");
 
 html,
 
 body{
-  
+
 }
 
 /* commonly used styles */
