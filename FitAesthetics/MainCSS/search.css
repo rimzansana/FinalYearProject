@@ -33,3 +33,13 @@ card-img-right {
 .border-bottom { border-bottom: 1px solid #e5e5e5; }
 
 .box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+
+/* Page Navigator */
+
+
+
+.page-item.active .page-link{
+    background-color:#D32F2F !important;
+    color: white !important;
+    border-color: #D32F2F !important;
+}

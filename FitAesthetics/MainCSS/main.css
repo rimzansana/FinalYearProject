@@ -19,7 +19,7 @@ body{
 }
 
 .red-text-color{
-    color: #D32F2F;
+    color: #D32F2F !important;
 }
 
 #text-decoration-none{
