@@ -4,6 +4,13 @@ body{
 
 }
 
-#test{
-  font-size: 5rem;
+/* Trainer input form styles */
+
+#form-header-size{
+    font-size: 1.5rem;
+    margin-top: 5rem;
+}
+
+#input-form-container-size{
+    height : 50rem;
 }
