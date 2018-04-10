@@ -20,20 +20,170 @@
 
     <div>
 
-      Rimzan is awesome
+    <!-- Navbar Component -->
+
+    <nav class="navbar navbar-expand-lg navbar-light" id="nav-container">
+
+
+        <a class="navbar-brand white-text-color" href="index.html">FitAesthetics.LK</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse flex-row-reverse" id="navbarNavDropdown">
+
+            <ul class="navbar-nav">
+
+              <form class="form-inline mr-3 ">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn white-text-color red-button-color my-2 my-sm-0" type="submit">Search</button>
+              </form>
+
+
+                <li class="nav-item active">
+                    <a class="nav-link white-text-color" href="">About<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link white-text-color" href="">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link white-text-color" href="" data-toggle="modal" data-target="#SignUP">Sign up</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link white-text-color" href="" data-toggle="modal" data-target="#LogIN">Log in</a>
+                </li>
+
+
+
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Search Banner Component -->
+
+    <div class="jumbotron jumbotron-fluid search-container">
+
+        <div class="container">
+            <h1 class="white-text-color">Find your perfect trainer below</h1>
+            <p class="lead my-5 white-text-color">Browse through our professional trainers to find the best fit for you.</p>
+        </div>
+
+    </div>
+
+    <!-- Result Text Component -->
+
+    <div class="container">
+      <div class="row container">
+        <h5><p>We have found</p></h5>
+        <h5><p> &nbsp;200</p></h5>
+        <h5><p> &nbsp;results</p></h5>
+      </div>
+    </div>
+
+    <!-- Filter Buttons Component -->
+
+    <div class="container my-3">
+
+      <div class="row container">
+
+        <div class="col-sm p-1">
+          <div class="dropdown">
+            <button class="btn btn-lg dropdown-toggle filter-button-settings white-text-color red-button-color" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+             City <span class="caret"></span>
+            </button>
+
+             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+               <li> <a class="dropdown-item" href="#">Colombo</a></li>
+               <li><a class="dropdown-item" href="#">Another action</a><li>
+               <li> <a class="dropdown-item" href="#">Something else here</a><li>
+
+             </div>
+        </div>
+
+        <div class="col-sm p-1">
+
+          <div class="dropdown">
+            <button class="btn btn-lg dropdown-toggle filter-button-settings white-text-color red-button-color" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+             Goal <span class="caret"></span>
+            </button>
+
+             <ul class="dropdown-menu sure" aria-labelledby="dropdownMenuButton">
+               <li> <a class="dropdown-item" href="#">Action</a></li>
+               <li><a class="dropdown-item" href="#">Another action</a><li>
+               <li> <a class="dropdown-item" href="#">Something else here</a><li>
+
+             </div>
+        </div>
+
+        <div class="col-sm p-1">
+
+          <div class="dropdown">
+            <button class="btn btn-lg dropdown-toggle filter-button-settings white-text-color red-button-color" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+             Gender <span class="caret"></span>
+            </button>
+
+             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+               <li> <a class="dropdown-item" href="#">Action</a></li>
+               <li><a class="dropdown-item" href="#">Another action</a><li>
+               <li> <a class="dropdown-item" href="#">Something else here</a><li>
+
+             </div>
+        </div>
+
+        <div class="col-sm p-1">
+
+          <div class="dropdown">
+            <button class="btn btn-lg dropdown-toggle filter-button-settings white-text-color red-button-color" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+             Sort By <span class="caret"></span>
+            </button>
+
+             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+               <li> <a class="dropdown-item" href="#">Action</a></li>
+               <li><a class="dropdown-item" href="#">Another action</a><li>
+               <li> <a class="dropdown-item" href="#">Something else here</a><li>
+
+             </div>
+        </div>
+
+
+      </div>
+
 
 
     </div>
 
 
 
+      </div>
 
 
+
+
+
+
+
+
+    </div>
 
       <!-- Optional JavaScript -->
       <!-- jQuery first, then Popper.js, then Bootstrap JS -->
       <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
       <script src="js/bootstrap.min.js"></script>
+
+      <!-- Filter button JavaScript -->
+      <script>
+      $(".dropdown-menu li a").click(function(){
+
+        $(".btn:first-child").html($(this).text()+' <span class="caret"></span>');
+
+      });
+
+      </script>
+
+
+
     </body>
   </html>
