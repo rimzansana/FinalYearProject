@@ -1,0 +1,27 @@
+@import url("index.css");
+@import url("trainerSignup.css");
+
+html,
+
+body{
+  
+}
+
+/* commonly used styles */
+
+.white-text-color{
+  color: white !important;
+}
+
+.red-button-color{
+  background-color: #D32F2F;
+}
+
+.red-text-color{
+    color: #D32F2F;
+}
+
+#text-decoration-none{
+    text-decoration: none;
+
+}
