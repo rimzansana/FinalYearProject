@@ -3,7 +3,33 @@ body{
 
 
 }
+
+/* Filter Button styles */
+
 .filter-button-settings{
     width: 12.5rem;
     height: 3rem;
 }
+
+/* Result card styles */
+
+card-img-right {
+  height: 100%;
+  border-radius: 0 5rem 5rem 0;
+}
+
+.flex-auto {
+  -ms-flex: 0 0 auto;
+  -webkit-box-flex: 0;
+  flex: 0 0 auto;
+}
+
+.h-250 { height: 250px; }
+@media (min-width: 768px) {
+  .h-md-250 { height: 240px; }
+}
+
+.border-top { border-top: 1px solid #e5e5e5; }
+.border-bottom { border-bottom: 1px solid #e5e5e5; }
+
+.box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
