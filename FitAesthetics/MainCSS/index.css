@@ -1,7 +1,7 @@
 html,
 
 body{
-  
+
 }
 
 /* Navbar styling */
@@ -14,14 +14,6 @@ body{
 
 /* Search Bar styling */
 
-.search-container
-{
-background-color: black;
-height: 30rem !important;
-display: flex;
-flex-direction: column;
-justify-content: center;
-}
 
 #search-content{
   display: flex;
