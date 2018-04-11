@@ -2,3 +2,23 @@ html,
 body{
 
 }
+
+/* Booking info breadcrumb styles */
+
+.p{
+    margin-bottom: 0rem !important;
+
+}
+
+#breadcrumb-p-props{
+    font-size: 1.2rem;
+}
+
+.breadcrumb-card-shadow{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 10px 20px 0 rgba(0, 0, 0, 0.05);
+}
+
+
+.card-props{
+  height: 6rem !important;
+}

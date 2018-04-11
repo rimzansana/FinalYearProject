@@ -34,3 +34,12 @@ body{
     color: #D32F2F;
 
 }
+
+.search-container
+{
+background-color: black;
+height: 30rem !important;
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
