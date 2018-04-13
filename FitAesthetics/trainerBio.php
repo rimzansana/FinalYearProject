@@ -10,7 +10,8 @@
 
     <!-- My Custom CSS -->
 
-    <link rel="stylesheet" href="MainCSS/main.css">
+    <link rel="stylesheet" type="text/css" href="MainCSS/main.css">
+    <link rel="stylesheet" type="text/css" href="css/datepicker.css">
 
     <title>FitAesthetics</title>
 
@@ -127,13 +128,34 @@
 
 
                 <div class="card-body">
-                    <div class="row">
-                    <div class="col">From</div>
-                    <div class="col">To</div>
-                    </div>
+
+                  <div class="row ml-4">
+
+                        <div class="col-3 d-flex align-items-center">From</div>
+                        <div class="col-9">
+
+                          <div class="input-group date w-75 datepicker" data-date-format="dd-mm-yyyy">
+                          <input class="form-control" type="text" name="">
+                          <span class="input-group-addon"></span>
+                          </div>
+
+                        </div>
+
+                        <div class="w-100 my-2"></div>
+                        <div class="col-3 d-flex align-items-center">To</div>
+                        <div class="col-9">
+
+                          <div  class="input-group date w-75 datepicker" data-date-format="dd-mm-yyyy">
+                          <input class="form-control" type="text" name="">
+                          <span class="input-group-addon"></span>
+                          </div>
+
+                        </div>
+                  </div>
 
 
-                     <a href="bookingInfo.php"><button type="button" class="btn btn-lg btn-block btn-danger my-5">Book</button></a>
+                    <button type="submit" class="btn btn-lg btn-block btn-danger my-3">Book</button>
+                    </form>
                      <hr />
 
                     <div class="row">
@@ -194,6 +216,22 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="js/bootstrap.min.js"></script>
+	  <script type="text/javascript" src="js/jquery.min.js"></script>
+	  <script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
+
+
+
+
+    <script type="text/javascript">
+	   $(function(){
+		 $(".datepicker").datepicker({
+			autoclose: true,
+			todayHighlight: true
+		  }).datepicker('update', new Date());
+	     });
+
+
+     </script>
 
   </script>
   </body>
