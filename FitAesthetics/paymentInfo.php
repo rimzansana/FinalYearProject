@@ -19,31 +19,9 @@
 
     <!-- Navbar Component -->
 
-    <nav class="navbar navbar-expand-lg navbar-light" id="nav-container">
-        <a class="navbar-brand white-text-color" href="index.html">FitAesthetics.LK</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse flex-row-reverse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link white-text-color" href="">About<span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link white-text-color" href="">Features</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link white-text-color" href="" data-toggle="modal" data-target="#SignUP">Sign up</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link white-text-color" href="" data-toggle="modal" data-target="#LogIN">Log in</a>
-                </li>
-
-            </ul>
-        </div>
-    </nav>
+    <?php
+    include_once 'Components/navbar.php';
+     ?>
 
     <!-- Payment info banner Component -->
 
@@ -144,84 +122,10 @@
 
       <!-- Booking info Box Component -->
 
-      <div class="col d-flex justify-content-end">
+      <?php
+      include_once 'Components/bookingbox.php';
+      ?>
 
-              <div class="trainer-bio-bio-booking-box">
-
-              <div class="container">
-              <div class="card-deck mb-3 text-center">
-              <div class="card mb-4 box-shadow">
-
-
-
-
-              <div class="card-body" id="info-box-height">
-
-                  <div class="row">
-
-                      <div class="col-7">
-
-                        <h4 class="d-flex justify-content-start">Lazar Angelov</h4>
-                        <p class="d-flex justify-content-start">Sri Jayawardanapura</p>
-                        <p class="d-flex justify-content-start">*****</p>
-
-                      </div>
-
-                      <div class="col-1">
-                      <img class="d-md-block h-100 box-shadow ml-2" src="images/Lazar-Bio.jpg" alt="Card image cap" id="booking-card-picture"/>
-                      </div>
-
-
-                  </div>
-
-                  <hr />
-
-                  <div class="row">
-                      <div class="col">
-                      <p class="d-flex justify-content-start">Per month</p>
-                      <p class="d-flex justify-content-start">Number of months</p>
-                      </div>
-
-                      <div class="col">
-                      <div class="d-flex justify-content-end mr-3">
-                      <div class="row">
-
-                      <p>Rs.</p>
-                      <p>&nbsp;20000</p>
-                      </div>
-                      </div>
-                      <p class="d-flex justify-content-end">6</p>
-
-                      </div>
-
-                  </div>
-
-                  <hr />
-
-                  <div class="row">
-                        <div class="col">
-                        <p class="d-flex justify-content-start"><strong>Total Training fee</strong></p>
-                        </div>
-
-                        <div class="col">
-                        <div class="d-flex justify-content-end mr-3">
-                        <div class="row">
-                        <p><strong>Rs.</strong> </p>
-                        <p><strong>&nbsp;120000</strong></p>
-                        </div>
-                        </div>
-
-                        </div>
-                  </div>
-
-                </div>
-
-                </div>
-                </div>
-                </div>
-              </div>
-
-      </div>
 
         </div>
         </div>
@@ -229,10 +133,10 @@
 
       <!-- Booking info footer Component -->
 
-      <div class="container">
-        <hr />
-        <small class="d-block mb-3 text-muted">&copy; FitAesthetics inc. All rights reserved</small>
-      </div>
+      <?php
+      include_once 'Components/minorfooter.php';
+      ?>
+
 
 
     <!-- Optional JavaScript -->
