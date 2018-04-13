@@ -55,14 +55,15 @@
 
         <div class="col-3 p-1 d-flex justify-content-center">
           <div class="dropdown">
-            <button class="btn btn-lg dropdown-toggle filter-button-settings btn-outline-danger" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            <button class="btn btn-lg dropdown-toggle filter-button-settings btn-outline-danger filter1" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
              City <span class="caret"></span>
             </button>
 
-             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+             <ul id="filter1" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                <li> <a class="dropdown-item" href="#">Colombo</a></li>
-               <li><a class="dropdown-item" href="#">Another action</a><li>
-               <li> <a class="dropdown-item" href="#">Something else here</a><li>
+               <li><a class="dropdown-item" href="#">Kolpity</a><li>
+               <li> <a class="dropdown-item" href="#">Nugegoda</a><li>
+               <li> <a class="dropdown-item" href="#">Dehiwala</a><li>
 
              </div>
         </div>
@@ -70,14 +71,14 @@
         <div class="col-3 p-1 d-flex justify-content-center">
 
           <div class="dropdown">
-            <button class="btn btn-lg dropdown-toggle filter-button-settings btn-outline-danger" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            <button class="btn btn-lg dropdown-toggle filter-button-settings btn-outline-danger filter2" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
              Goal <span class="caret"></span>
             </button>
 
-             <ul class="dropdown-menu sure" aria-labelledby="dropdownMenuButton">
-               <li> <a class="dropdown-item" href="#">Action</a></li>
-               <li><a class="dropdown-item" href="#">Another action</a><li>
-               <li> <a class="dropdown-item" href="#">Something else here</a><li>
+             <ul id="filter2" class="dropdown-menu sure" aria-labelledby="dropdownMenuButton">
+               <li> <a class="dropdown-item" href="#">Muscle gain</a></li>
+               <li><a class="dropdown-item" href="#">Weight loss</a><li>
+               <li> <a class="dropdown-item" href="#">Fat loss</a><li>
 
              </div>
         </div>
@@ -85,14 +86,14 @@
         <div class="col-3 p-1 d-flex justify-content-center">
 
           <div class="dropdown">
-            <button class="btn btn-lg dropdown-toggle filter-button-settings btn-outline-danger" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            <button class="btn btn-lg dropdown-toggle filter-button-settings btn-outline-danger filter3" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
              Gender <span class="caret"></span>
             </button>
 
-             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-               <li> <a class="dropdown-item" href="#">Action</a></li>
-               <li><a class="dropdown-item" href="#">Another action</a><li>
-               <li> <a class="dropdown-item" href="#">Something else here</a><li>
+             <ul id="filter3" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+               <li> <a class="dropdown-item" href="#">Male</a></li>
+               <li><a class="dropdown-item" href="#">Female</a><li>
+
 
              </div>
         </div>
@@ -100,14 +101,14 @@
         <div class="col-3 p-1 d-flex justify-content-center">
 
           <div class="dropdown">
-            <button class="btn btn-lg dropdown-toggle filter-button-settings btn-outline-danger" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            <button class="btn btn-lg dropdown-toggle filter-button-settings btn-outline-danger filter4" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
              Sort By <span class="caret"></span>
             </button>
 
-             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-               <li> <a class="dropdown-item" href="#">Action</a></li>
-               <li><a class="dropdown-item" href="#">Another action</a><li>
-               <li> <a class="dropdown-item" href="#">Something else here</a><li>
+             <ul id="filter4" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+               <li> <a class="dropdown-item" href="#">Highest price</a></li>
+               <li><a class="dropdown-item" href="#">Lowest price</a><li>
+               <li> <a class="dropdown-item" href="#">Rating</a><li>
 
              </div>
         </div>
@@ -285,9 +286,27 @@
 
       <!-- Filter button JavaScript -->
       <script>
-      $(".dropdown-menu li a").click(function(){
+      $("#filter1 li a").click(function(){
 
-        $(".btn:first-child").html($(this).text()+' <span class="caret"></span>');
+        $(".filter1:first-child").html($(this).text()+' <span class="caret"></span>');
+
+      });
+
+      $("#filter2 li a").click(function(){
+
+        $(".filter2:first-child").html($(this).text()+' <span class="caret"></span>');
+
+      });
+
+      $("#filter3 li a").click(function(){
+
+        $(".filter3:first-child").html($(this).text()+' <span class="caret"></span>');
+
+      });
+
+      $("#filter4 li a").click(function(){
+
+        $(".filter4:first-child").html($(this).text()+' <span class="caret"></span>');
 
       });
 
