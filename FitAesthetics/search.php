@@ -27,12 +27,12 @@
           session_start();
           if(isset($_SESSION['loggedIn'])){
             if($_SESSION['loggedIn'] == '1'){
-            include('Components/logged_nav.php');
+            include('Components/search-logged_nav.php');
             }else {
-              include('Components/unlogged_nav.php');
+              include('Components/search-unlogged_nav.php');
             }
           }else {
-              include('Components/unlogged_nav.php');
+              include('Components/search-unlogged_nav.php');
           }
 
       ?>
