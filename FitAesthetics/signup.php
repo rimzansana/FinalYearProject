@@ -14,7 +14,7 @@ if (isset($_POST['signup-button'])){
 
   //Inserting the user into the database
 
-  $insert = "INSERT INTO user(fName, lName, email, password) VALUES('$first','$last',''$email','$pass')";
+  $insert = "INSERT INTO user(fName, lName, email, password) VALUES('$first','$last','$email','$pass')";
   mysqli_query($dbcon,$insert);
   session_start();
   $_SESSION['loggedIn'] = '1';
