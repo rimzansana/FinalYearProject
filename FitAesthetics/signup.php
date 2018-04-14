@@ -10,11 +10,11 @@ if (isset($_POST['signup-button'])){
 
   //Hashing the password
 
-  $hashedpwd = password_hash($pass,PASSWORD_DEFAULT);
+  //$hashedpwd = password_hash($pass,PASSWORD_DEFAULT);
 
   //Inserting the user into the database
 
-  $insert = "INSERT INTO user(fName, lName, email, password) VALUES('$email','$first','$last','$hashedpwd')";
+  $insert = "INSERT INTO user(fName, lName, email, password) VALUES('$first','$last',''$email','$pass')";
   mysqli_query($dbcon,$insert);
   session_start();
   $_SESSION['loggedIn'] = '1';
