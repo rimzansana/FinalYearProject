@@ -15,11 +15,12 @@
 
             <div class="d-flex justify-content-center modal-settings">
 
-              <form id="login-modal-form" action="login.php" method="POST">
-                  <input type="email" name="email" class="form-control"  placeholder="Email" />
-                  <input type="password" name="password" class="form-control my-3"  placeholder="Password" />
-                  <button type="button" name="submit" class="btn red-button-color white-text-color my-4 form-button-size">Log in</button>
-              </form>
+              <form id="login-modal-form" action="./check_auth.php" method="post">
+                  	<input type = "hidden" name = "submitted" value = "true" />
+                      <input type="email" class="form-control"  placeholder="Email" name="emailx" id="emailx" />
+                      <input type="password" class="form-control my-3"  placeholder="Password" name="passwordx" id="passwordx" />
+                      <button type="submit" class="btn red-button-color white-text-color my-4 form-button-size">Log in</button>
+                  </form>
 
               <div>
                   <div class="d-flex justify-content-center">

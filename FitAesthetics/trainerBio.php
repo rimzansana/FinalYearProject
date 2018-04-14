@@ -18,11 +18,18 @@
   </head>
   <body>
 
-  <!-- Navbar Component -->
+    <!-- Navbar Component -->
 
-  <?php
-  include_once 'Components/navbar.php';
-   ?>
+        <?php
+        session_start();
+          if($_SESSION['loggedIn'] == '1'){
+            include('Components/logged_nav.php');
+          }else {
+            include('Components/unlogged_nav.php');
+          }
+    ?>
+
+
 
   <!-- Profile Header Component -->
 
@@ -131,27 +138,27 @@
 
                   <div class="row ml-4">
 
-                        <div class="col-3 d-flex align-items-center">From</div>
-                        <div class="col-9">
+                       <div class="col-3 d-flex align-items-center">From</div>
+                       <div class="col-9">
 
-                          <div class="input-group date w-75 datepicker" data-date-format="dd-mm-yyyy">
-                          <input class="form-control" type="text" name="">
-                          <span class="input-group-addon"></span>
-                          </div>
+                         <div id="date-settings" class="input-group date w-75 datepicker" data-date-format="dd-mm-yyyy">
+                         <input class="form-control" type="text" name="">
+                         <span class="input-group-addon"></span>
+                         </div>
 
-                        </div>
+                       </div>
 
-                        <div class="w-100 my-2"></div>
-                        <div class="col-3 d-flex align-items-center">To</div>
-                        <div class="col-9">
+                       <div class="w-100 my-2"></div>
+                       <div class="col-3 d-flex align-items-center">To</div>
+                       <div class="col-9">
 
-                          <div  class="input-group date w-75 datepicker" data-date-format="dd-mm-yyyy">
-                          <input class="form-control" type="text" name="">
-                          <span class="input-group-addon"></span>
-                          </div>
+                         <div  class="input-group date w-75 datepicker" data-date-format="dd-mm-yyyy">
+                         <input class="form-control" type="text" name="">
+                         <span class="input-group-addon"></span>
+                         </div>
 
-                        </div>
-                  </div>
+                       </div>
+                 </div>
 
 
                     <button type="submit" class="btn btn-lg btn-block btn-danger my-3">Book</button>

@@ -1,3 +1,5 @@
+
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -21,9 +23,21 @@
 
 <!-- Navbar Component -->
 
-    <?php
-    include_once 'Components/navbar.php';
-     ?>
+<?php
+
+    session_start();
+    if(isset($_SESSION['loggedIn'])){
+      if($_SESSION['loggedIn'] == '1'){
+      include('Components/logged_nav.php');
+      }else {
+        include('Components/unlogged_nav.php');
+      }
+    }else {
+        include('Components/unlogged_nav.php');
+    }
+
+?>
+
 
 
 <!-- Seacrh Bar Component -->

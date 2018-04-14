@@ -19,9 +19,16 @@
 
     <!-- Navbar Component -->
 
-    <?php
-    include_once 'Components/navbar.php';
-     ?>
+        <?php
+        session_start();
+          if($_SESSION['loggedIn'] == '1'){
+            include('Components/logged_nav.php');
+          }else {
+            include('Components/unlogged_nav.php');
+          }
+    ?>
+
+
 
     <!-- Payment info banner Component -->
 
