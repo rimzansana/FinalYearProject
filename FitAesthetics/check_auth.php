@@ -4,21 +4,21 @@ if(isset($_POST['submitted'])){
 
     include('connect_mysql.php');
 
-    if (isset($_POST['emailx']))
+    if (isset($_POST['email']))
     {
-    $emailx= $_POST["emailx"];
-    $emailx = stripcslashes($emailx);
+    $email= $_POST["email"];
+    $email = stripcslashes($email);
     }
-    if (isset($_POST['passwordx']))
+    if (isset($_POST['password']))
     {
-    $passwordx= $_POST["passwordx"];
-    $passwordx = stripcslashes($passwordx);
+    $password= $_POST["password"];
+    $password = stripcslashes($password);
     }
 
 }
 
 	if(count($_POST)>0) {
-		$result = mysqli_query($dbcon,"SELECT * FROM user WHERE email='$emailx' and password = '$passwordx'");
+		$result = mysqli_query($dbcon,"SELECT * FROM user WHERE email='$email' and password = '$password'");
 		$count  = mysqli_num_rows($result);
 		if($count==0) {
 			$message = "Invalid Username or Password!";
@@ -26,7 +26,7 @@ if(isset($_POST['submitted'])){
 		} else {
 			session_start();
 			$_SESSION['loggedIn'] = '1';
-			$_SESSION['emailx'] = $emailx;
+			$_SESSION['email'] = $email;
 			header('Location: home.php');
 		}
 	}

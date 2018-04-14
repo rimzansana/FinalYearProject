@@ -18,7 +18,7 @@ if (isset($_POST['signup-button'])){
   mysqli_query($dbcon,$insert);
   session_start();
   $_SESSION['loggedIn'] = '1';
-  $_SESSION['emailx'] = $emailx;
+  $_SESSION['email'] = $email;
   header('Location: home.php');
   exit();
 }
