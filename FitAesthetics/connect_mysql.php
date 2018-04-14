@@ -13,5 +13,5 @@ $dbcon = mysqli_connect(DB_HOST,DB_USER,DB_PSWD,DB_NAME);
 if (!$dbcon) {
     die("Connection failed: " . $conn->connect_error);
 }
-echo "connect success";
+
 ?>

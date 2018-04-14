@@ -15,12 +15,12 @@
 
         <div class="d-flex justify-content-center modal-settings">
 
-           <form id="signup-modal-form">
-               <input type="email" class="form-control my-2"  placeholder="Email" />
-               <input type="text" class="form-control my-2"  placeholder="First Name" />
-               <input type="text" class="form-control my-2"  placeholder="last Name" />
-               <input type="password" class="form-control my-2"  placeholder="Password" />
-               <button type="button" class="btn red-button-color white-text-color my-4 form-button-size">Sign up</button>
+           <form id="signup-modal-form" action="signup.php" method="POST">
+               <input type="email" class="form-control my-2"  placeholder="Email" name="email" />
+               <input type="text" class="form-control my-2"  placeholder="First Name" name="first" />
+               <input type="text" class="form-control my-2"  placeholder="last Name" name="last" />
+               <input type="password" class="form-control my-2"  placeholder="Password" name="pass" />
+               <button type="submit" class="btn red-button-color white-text-color my-4 form-button-size" name="signup-button">Sign up</button>
            </form>
 
            <div>
