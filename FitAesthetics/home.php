@@ -23,12 +23,14 @@
 
     <?php
     session_start();
-      if($_SESSION['loggedIn'] == '1'){
-        include('Components/logged_nav.php');
-      }else {
-        include('Components/unlogged_nav.php');
-      }
+    if(isset($_SESSION['email'])){
+      include('Components/logged_nav.php');
+    }
+    else{
+      include('Components/unlogged_nav.php');
+    }
 ?>
+
 
 
 

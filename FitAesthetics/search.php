@@ -25,15 +25,12 @@
       <?php
 
           session_start();
-          if(isset($_SESSION['loggedIn'])){
-            if($_SESSION['loggedIn'] == '1'){
-            include('Components/search-logged_nav.php');
-            }else {
+          if(isset($_SESSION['email'])){
+            include('Components/search-logged_nav.php');}
+            else {
               include('Components/search-unlogged_nav.php');
             }
-          }else {
-              include('Components/search-unlogged_nav.php');
-          }
+
 
       ?>
 
