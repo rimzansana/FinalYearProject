@@ -56,28 +56,28 @@
 
         <p class="lead" id="form-header-size">Send us your details by filling the fields below and our team will get back to you right away.</p>
 
-        <form>
+        <form action="trainer-signup-query.php" method="POST">
 
         <div class="form-group my-5 w-75">
             <label>What is your name?</label>
-            <input type="text" class="form-control " placeholder="Name" aria-describedby="h-1" />
+            <input type="text" class="form-control " placeholder="Name" aria-describedby="h-1" name="name" required/>
             <small id="h-1" class="form-text text-muted"> Give us your full name !</small>
         </div>
 
         <div class="form-group my-5 w-75">
             <label>Tell us your area</label>
-            <input type="text" class="form-control" placeholder="ex : ‘Rajagiriya’" />
+            <input type="text" class="form-control" placeholder="ex : ‘Rajagiriya’" name="area" required/>
         </div>
 
 
         <div class="form-group my-5 w-75">
             <label>How long have you been training clients for?</label>
-            <input type="text" class="form-control" placeholder="Years" aria-describedby="h-3" />
+            <input type="text" class="form-control" placeholder="Years" aria-describedby="h-3" name="experience" required/>
         </div>
 
         <div class="form-group my-5 w-75">
             <label>Select your area of expertise</label>
-            <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+            <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref" name="expertise" >
               <option default>Choose...</option>
               <option value="1">Bodybuilding</option>
               <option value="2">Calisthenics</option>
@@ -89,10 +89,10 @@
 
         <div class="form-group my-5 w-75">
             <label>Give us your email address</label>
-            <input type="text" class="form-control" placeholder="Email Address" />
+            <input type="email" class="form-control" placeholder="Email Address" name="email" required/>
         </div>
 
-        <button type="submit" class="btn red-button-color white-text-color my-3 w-25">Submit</button>
+        <button type="submit" class="btn red-button-color white-text-color my-3 w-25" name="trainer-signup-button">Submit</button>
 
         </form>
 
