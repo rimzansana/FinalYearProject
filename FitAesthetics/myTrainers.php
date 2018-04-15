@@ -91,7 +91,7 @@
                         </div>
 
                         <div class="col d-flex justify-content-end">
-                        <button class="btn red-button-color white-text-color">Rate this trainer</button>
+                        <button class="btn red-button-color white-text-color" data-toggle="modal" data-target="#Review">Rate this trainer</button>
                         </div>
 
                     </div>
@@ -140,7 +140,7 @@
                         </div>
 
                         <div class="col d-flex justify-content-end">
-                        <button class="btn red-button-color white-text-color">Rate this trainer</button>
+                        <button class="btn red-button-color white-text-color" data-toggle="modal" data-target="#Review">Rate this trainer</button>
                         </div>
 
                     </div>
@@ -189,7 +189,7 @@
                         </div>
 
                         <div class="col d-flex justify-content-end">
-                        <button class="btn red-button-color white-text-color">Rate this trainer</button>
+                        <button class="btn red-button-color white-text-color" data-toggle="modal" data-target="#Review">Rate this trainer</button>
                         </div>
 
                     </div>
@@ -208,6 +208,17 @@
     <?php
     include_once 'Components/footer.php';
      ?>
+
+     <!-- Review modal Component -->
+
+     <?php
+     include_once 'Components/review-modal.php';
+      ?>
+
+
+
+
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
