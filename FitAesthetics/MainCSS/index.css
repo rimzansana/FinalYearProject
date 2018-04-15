@@ -84,14 +84,14 @@ justify-content: center;
 /* Common Modal styling */
 
 .modal-settings{
-    height: 30rem;
+    height: 33rem;
     display: flex;
    flex-direction: column;
    justify-content: center;
 }
 
 .modal-main-settings{
-    width: 30rem;
+    width: 40rem;
 
 }
 
@@ -116,7 +116,7 @@ justify-content: center;
 
 #signup-modal-form{
    width: 20rem;
-   height :20rem;
+   height :25rem;
    display: flex;
    flex-direction: column;
    justify-content: center;

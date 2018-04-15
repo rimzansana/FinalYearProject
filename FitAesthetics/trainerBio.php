@@ -147,6 +147,7 @@
 
                        <div class="col-3 d-flex align-items-center">From</div>
                        <div class="col-9">
+                    <form action="bookingInfo.php">
 
                          <div id="date-settings" class="input-group date w-75 datepicker" data-date-format="dd-mm-yyyy">
                          <input class="form-control" type="text" name="">

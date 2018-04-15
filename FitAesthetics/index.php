@@ -26,6 +26,7 @@
 <?php
 
     session_start();
+
     if(isset($_SESSION['loggedIn'])){
       if($_SESSION['loggedIn'] == '1'){
       include('Components/logged_nav.php');
@@ -242,7 +243,6 @@
     <?php
     include_once 'Components/signup-modal.php';
     ?>
-
 
 <!-- Reset Password modal Component -->
 
