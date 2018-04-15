@@ -152,7 +152,7 @@ justify-content: center;
 
 #review-modal-settings{
     height: 20rem;
-    width:15rem;
+    width:20rem;
     display: flex;
    flex-direction: column;
    justify-content: center;

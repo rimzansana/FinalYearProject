@@ -275,7 +275,7 @@
 
 
               <form>
-                <textarea class="form-control" placeholder="Describe your experience" id="#review-input"></textarea>
+                <textarea class="form-control" placeholder="Describe your experience" id="review-input"></textarea>
                 <button class="btn red-button-color white-text-color my-4 w-100" type="submit">Submit review </button>
               </form>
             </div>
