@@ -137,3 +137,23 @@ justify-content: center;
    flex-direction: column;
    justify-content: center;
 }
+
+/* Review Modal styling */
+
+#italic-header{
+    font-style: italic;
+}
+
+#review-input{
+    height: 6rem !important;
+    display: flex;
+    align-items: flex-start;
+}
+
+#review-modal-settings{
+    height: 20rem;
+    width:15rem;
+    display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
