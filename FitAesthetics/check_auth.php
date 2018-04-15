@@ -21,8 +21,11 @@ if(isset($_POST['submitted'])){
 		$result = mysqli_query($dbcon,"SELECT * FROM user WHERE email='$email' and password = '$password'");
 		$count  = mysqli_num_rows($result);
 		if($count==0) {
-			$message = "Invalid Username or Password!";
+			$message = "<p>Incorrect username or password! Please try again :)</p>";
 			echo $message;
+      header( "refresh:2;url=index.php" );
+      exit();
+
 		} else {
 			session_start();
 			$_SESSION['loggedIn'] = '1';

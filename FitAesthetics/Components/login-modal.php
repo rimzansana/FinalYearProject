@@ -17,8 +17,8 @@
 
               <form id="login-modal-form" action="./check_auth.php" method="post">
                   	<input type = "hidden" name = "submitted" value = "true" />
-                      <input type="email" class="form-control"  placeholder="Email" name="email" id="emailx" />
-                      <input type="password" class="form-control my-3"  placeholder="Password" name="password" id="passwordx" />
+                      <input type="email" class="form-control"  placeholder="Email" name="email" id="emailx" required/>
+                      <input type="password" class="form-control my-3"  placeholder="Password" name="password" id="passwordx" required/>
                       <button type="submit" class="btn red-button-color white-text-color my-4 form-button-size">Log in</button>
                   </form>
 
