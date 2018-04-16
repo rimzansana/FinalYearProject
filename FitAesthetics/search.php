@@ -26,11 +26,11 @@
 
           session_start();
           if(isset($_SESSION['email'])){
-            include('Components/search-logged_nav.php');}
-            else {
-              include('Components/search-unlogged_nav.php');
-            }
-
+            include('Components/search-logged_nav.php');
+          }
+          else{
+            include('Components/search-unlogged_nav.php');
+          }
 
       ?>
 
@@ -132,98 +132,14 @@
 
     <!-- Search Result cards Component -->
 
+
     <div class="container my-5">
 
     <div class="row mb-2">
 
-        <div class="col-md-6">
-
-            <div class="card flex-md-row mb-4 box-shadow h-md-250">
-                <img class="card-img-right flex-auto d-none d-md-block h-100" src="images/card-profile.jpg" alt="Card image cap" width="160" />
-                <div class="card-body d-flex flex-column align-items-start">
-
-                    <h3 class="mb-0">
-                    <a class="text-dark">Lazar Angelov</a>
-                    </h3>
-
-                <div class="text-muted">Body building , Calisthenics and cardio</div>
-
-                <div class="container">
-                    <div class=" row my-3">
-                    <p> Experience : </p>
-                    <p> &nbsp; 5 Years</p>
-                    </div>
-
-                    <div class=" row mb-auto">
-                    <p>15000</p>
-                    <p> &nbsp;LKR per month</p>
-                    </div>
-                </div>
-
-                <div class="w-100">
-
-                    <div class="row">
-                        <div class="col w-50">
-                        <a href="trainerBio.php" id="text-decoration-none">View Profile</a>
-                        </div>
-
-                        <div class="col d-flex justify-content-end">
-                        *****
-                        </div>
-
-                    </div>
-                </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="col-md-6">
-
-            <div class="card flex-md-row mb-4 box-shadow h-md-250">
-                <img class="card-img-right flex-auto d-none d-md-block h-100" src="images/card-profile.jpg" alt="Card image cap" width="160" />
-                <div class="card-body d-flex flex-column align-items-start">
-
-                    <h3 class="mb-0">
-                    <a class="text-dark">Lazar Angelov</a>
-                    </h3>
-
-                 <div class="text-muted">Body building , Calisthenics and cardio</div>
-
-                <div class="container">
-                    <div class=" row my-3">
-                    <p> Experience : </p>
-                    <p> &nbsp; 5 Years</p>
-                    </div>
-
-                    <div class=" row mb-auto">
-                    <p>15000</p>
-                    <p> &nbsp;LKR per month</p>
-                    </div>
-                </div>
-
-                <div class="w-100">
-
-                    <div class="row">
-                        <div class="col w-50">
-                        <a href="trainerBio.php" id="text-decoration-none">View Profile</a>
-                        </div>
-
-                        <div class="col d-flex justify-content-end">
-                        *****
-                        </div>
-
-                    </div>
-                </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
+      <?php
+      include_once 'search_query.php';
+      ?>
 
 
     </div>

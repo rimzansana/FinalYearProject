@@ -11,7 +11,7 @@
 
             <ul class="navbar-nav">
 
-              <form class="form-inline mr-3 ">
+              <form class="form-inline mr-3 " action="">
               <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
               <button class="btn white-text-color red-button-color my-2 my-sm-0" type="submit">Search</button>
               </form>

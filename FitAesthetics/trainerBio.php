@@ -146,7 +146,7 @@
                        <div class="col-9">
                     <form action="bookingLogic.php">
 
-                         <div id="date-settings" class="input-group date w-75 datepicker" data-date-format="dd-mm-yyyy">
+                         <div id="date-settings" class="input-group date w-75 datepicker" data-date-format="yyyy-mm-dd">
                          <input class="form-control" type="text" name="">
                          <span class="input-group-addon"></span>
                          </div>
@@ -157,7 +157,7 @@
                        <div class="col-3 d-flex align-items-center">To</div>
                        <div class="col-9">
 
-                         <div  class="input-group date w-75 datepicker" data-date-format="dd-mm-yyyy">
+                         <div  class="input-group date w-75 datepicker" data-date-format="yyyy-mm-dd">
                          <input class="form-control" type="text" name="">
                          <span class="input-group-addon"></span>
                          </div>
