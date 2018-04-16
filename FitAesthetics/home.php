@@ -46,9 +46,9 @@
                 <p class="lead white-text-color" >We bring fitness to your fingertips. Find your personal trainer now.</p>
                 <hr class="my-4" />
 
-                <form action="search.php" class="form-inline">
-                    <input class="form-control mr-sm-2 w-75 p-4 " type="search" placeholder="Try Colombo" aria-label="Search" id="search-input" />
-                    <button class="btn my-2 my-sm-0 p-3 white-text-color red-button-color " type="submit" id="search-button">Search</button><
+                <form action="search.php" class="form-inline" method="post">
+                    <input class="form-control mr-sm-2 w-75 p-4 " type="search" placeholder="Try Colombo" aria-label="Search" id="search-input" name="search" />
+                    <button class="btn my-2 my-sm-0 p-3 white-text-color red-button-color " type="submit" id="search-button" name="index-search">Search</button><
                 </form>
 
             </div>

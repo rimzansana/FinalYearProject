@@ -20,6 +20,7 @@ if(isset($_POST['submitted'])){
 	if(count($_POST)>0) {
 		$result = mysqli_query($dbcon,"SELECT * FROM user WHERE email='$email' and password = '$password'");
 		$count  = mysqli_num_rows($result);
+
 		if($count==0) {
 			$message = "<p>Incorrect username or password! Please try again :)</p>";
 			echo $message;
