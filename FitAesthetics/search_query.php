@@ -2,7 +2,7 @@
 
     include_once 'connect_mysql.php';
 
-    $sql = "SELECT * FROM user";
+    $sql = "SELECT * FROM trainer";
     $result = mysqli_query($dbcon,$sql);
     $queryResults = mysqli_num_rows($result);
 
@@ -15,20 +15,25 @@
                     <img class='card-img-right flex-auto d-none d-md-block h-100' src='images/card-profile.jpg' alt='Card image cap' width='160' />
                     <div class='card-body d-flex flex-column align-items-start'>
 
-                        <h3 class='mb-0'>
+                        <h3 class='mb-0 container'>
+                        <div class='row'>
                         <a class='text-dark'>".$row['fName']."</a>
+                        <a class='text-dark'>&nbsp;".$row['lName']."</a>
+                        </div>
+
+
                         </h3>
 
-                    <div class='text-muted'>".$row['lName']."</div>
+                    <div class='text-muted'>".$row['location']."</div>
 
                     <div class='container'>
                         <div class='row my-3'>
                         <p> Experience : </p>
-                        <p> &nbsp; ".$row['email']."</p>
+                        <p> &nbsp; ".$row['experience']."</p>
                         </div>
 
                         <div class='row mb-auto'>
-                        <p>15000</p>
+                        <p>".$row['fee']."</p>
                         <p> &nbsp;LKR per month</p>
                         </div>
                     </div>
