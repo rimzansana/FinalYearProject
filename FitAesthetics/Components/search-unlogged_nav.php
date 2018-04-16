@@ -11,9 +11,9 @@
 
             <ul class="navbar-nav">
 
-              <form class="form-inline mr-3" action="">
-              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn white-text-color red-button-color my-2 my-sm-0" type="submit">Search</button>
+              <form class="form-inline mr-3" action="./search.php" method="post">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="search">
+              <button class="btn white-text-color red-button-color my-2 my-sm-0" type="submit" name="search-button">Search</button>
               </form>
 
 
