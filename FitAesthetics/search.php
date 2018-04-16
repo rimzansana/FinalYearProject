@@ -137,8 +137,8 @@
 
     <div class="row mb-2">
 
-      <?php
-    include_once 'searchButton-query.php';
+    <?php
+    include_once 'search_query.php';
     ?>
 
     </div>
