@@ -16,7 +16,17 @@ if(isset($_POST['search-button'])){
 
   if($queryResult>0){
 
+    echo "<div class='container'>
+      <div class='row container'>
+        <h5><p>We have found</p></h5>
+        <h5><p> &nbsp;".$queryResult."</p></h5>
+        <h5><p> &nbsp;results</p></h5>
+      </div>
+    </div>";
+
     while($row= mysqli_fetch_assoc($result1)){
+
+
 
       echo "<div class='col-md-6 pt-3'>
         <div class='card flex-md-row mb-4 box-shadow h-md-250'>
@@ -97,7 +107,16 @@ else if(isset($_POST['index-search'])){
 
   if($queryResult>0){
 
+    echo "<div class='container'>
+      <div class='row container'>
+        <h5><p>We have found</p></h5>
+        <h5><p> &nbsp;".$queryResult."</p></h5>
+        <h5><p> &nbsp;results</p></h5>
+      </div>
+    </div>";
+
     while($row= mysqli_fetch_assoc($result1)){
+
 
       echo "<div class='col-md-6 pt-3'>
         <div class='card flex-md-row mb-4 box-shadow h-md-250'>
@@ -154,12 +173,14 @@ else if(isset($_POST['index-search'])){
     echo '<script language="javascript">';
     echo 'alert("We do not have results , please try again ")';
     echo '</script>';
+    
 
   }
 
 
 
 }
+
 
 /* General search */
 
@@ -172,7 +193,17 @@ else{
 
       if($queryResults>0){
 
+        echo "<div class='container'>
+          <div class='row container'>
+            <h5><p>We have found</p></h5>
+            <h5><p> &nbsp;".$queryResults."</p></h5>
+            <h5><p> &nbsp;results</p></h5>
+          </div>
+        </div>";
+
           while($row= mysqli_fetch_assoc($result)){
+
+
 
             echo "<div class='col-md-6 pt-3'>
               <div class='card flex-md-row mb-4 box-shadow h-md-250'>

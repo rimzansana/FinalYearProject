@@ -46,15 +46,6 @@
 
     </div>
 
-    <!-- Result Text Component -->
-
-    <div class="container">
-      <div class="row container">
-        <h5><p>We have found</p></h5>
-        <h5><p> &nbsp;200</p></h5>
-        <h5><p> &nbsp;results</p></h5>
-      </div>
-    </div>
 
     <!-- Filter Buttons Component -->
 
