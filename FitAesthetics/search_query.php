@@ -175,6 +175,7 @@ else if(isset($_POST['index-search'])){
     echo '</script>';
 
 
+
   }
 
 
@@ -182,7 +183,9 @@ else if(isset($_POST['index-search'])){
 }
 
 
+
 /* General search */
+
 
 else{
 

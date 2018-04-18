@@ -5,7 +5,7 @@
   </head>
   <body>
 
-  	<nav class="navbar navbar-expand-lg navbar-light" id="nav-container">
+  	<nav class="navbar fixed-top navbar-expand-lg navbar-light" id="nav-container">
         <a class="navbar-brand white-text-color" href="index.php">FitAesthetics.LK</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -17,7 +17,7 @@
                     <a class="nav-link white-text-color" href="">About<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link white-text-color" href="">Search</a>
+                    <a class="nav-link white-text-color" href="./search.php">Browse</a>
                 </li>
 
                 <li class="nav-item">

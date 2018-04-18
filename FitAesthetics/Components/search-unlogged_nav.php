@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light" id="nav-container">
+<nav class="navbar fixed-top navbar-expand-lg navbar-light" id="nav-container">
 
 
         <a class="navbar-brand white-text-color" href="index.php">FitAesthetics.LK</a>
@@ -21,7 +21,7 @@
                     <a class="nav-link white-text-color" href="">About<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link white-text-color" href="">Search</a>
+                    <a class="nav-link white-text-color" href="./search.php">View All</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link white-text-color" href="" data-toggle="modal" data-target="#SignUP">Sign up</a>
