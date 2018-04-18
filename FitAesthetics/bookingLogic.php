@@ -12,7 +12,7 @@
     echo '<script language="javascript">';
     echo 'alert("Please sign in to follow the booking process")';
     echo '</script>';
-    header( "refresh:0.5;url=trainerBio.php" );
+    header( "refresh:0.5;url=search.php" );
     exit();
 
     }
