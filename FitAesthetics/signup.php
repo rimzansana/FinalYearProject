@@ -16,9 +16,16 @@ if (isset($_POST['signup-button'])){
 
   $insert = "INSERT INTO user(fName, lName, email, password) VALUES('$first','$last','$email','$pass')";
   mysqli_query($dbcon,$insert);
+
+  $result = mysqli_query($dbcon,"SELECT * FROM user WHERE email='$email' and password = '$pass'");
+  $row= mysqli_fetch_assoc($result);
+  $user = $row['userID'];
+
   session_start();
-  $_SESSION['loggedIn'] = '1';
+
   $_SESSION['email'] = $email;
+  $_SESSION['uID'] = $user;
+
   header('Location: home.php');
   exit();
 }

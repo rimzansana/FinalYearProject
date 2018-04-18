@@ -23,7 +23,7 @@
 
     <?php
     session_start();
-    if(isset($_SESSION['email'])){
+    if(isset($_SESSION['uID'])){
       include('Components/logged_nav.php');
     }
     else{

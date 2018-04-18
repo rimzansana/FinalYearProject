@@ -3,7 +3,7 @@
 
     session_start();
 
-    if(isset($_SESSION['email'])){
+    if(isset($_SESSION['uID'])){
 
     header('Location: bookingInfo.php');
     }

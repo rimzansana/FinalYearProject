@@ -23,7 +23,7 @@
     <?php
 
     session_start();
-    if(isset($_SESSION['email'])){
+    if(isset($_SESSION['uID'])){
       include('Components/logged_nav.php');
     }
     else{
@@ -49,7 +49,7 @@
 
   if($queryResults>0){
     while($row= mysqli_fetch_assoc($result)){
-      echo "<div class='container my-5'>
+      echo "<div class='container my-5 pt-5'>
 
              <div class='row d-flex align-items-center' id='row-height'>
 
@@ -70,7 +70,8 @@
                      <br />
                      <div class='row container'>
                      <p class='lead'><strong>Experience :</strong></p>
-                     <p class='lead ml-1'><strong>".$row['experience']." </strong></p>
+                     <p class='lead ml-1'><strong>".$row['experience']."</strong></p>
+                     <p class='lead ml-1'><strong>&nbsp;Years</strong></p>
                      </div>
                  </div>
 

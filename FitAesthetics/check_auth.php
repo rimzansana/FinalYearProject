@@ -20,6 +20,8 @@ if(isset($_POST['submitted'])){
 	if(count($_POST)>0) {
 		$result = mysqli_query($dbcon,"SELECT * FROM user WHERE email='$email' and password = '$password'");
 		$count  = mysqli_num_rows($result);
+    $row= mysqli_fetch_assoc($result);
+    $user = $row['userID'];
 
 		if($count==0) {
 			$message = "<p>Incorrect username or password! Please try again :)</p>";
@@ -29,9 +31,9 @@ if(isset($_POST['submitted'])){
 
 		} else {
 			session_start();
-			$_SESSION['loggedIn'] = '1';
 			$_SESSION['email'] = $email;
-			header('Location: home.php');
+      $_SESSION['uID'] = $user;
+      header('Location: home.php');
 		}
 	}
 
