@@ -16,9 +16,6 @@ if (isset($_POST['update-button'])){
   $address = mysqli_real_escape_string($dbcon, $_POST['address']);
 
 
-
-
-
   $update = "UPDATE user SET fName='$firstname', lName='$lastname',dob='$date', gender='$gender' , email='$email', password='$password', telno='$telno', address='$address' WHERE userID='$user'";
 
   mysqli_query($dbcon,$update);
