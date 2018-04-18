@@ -56,40 +56,40 @@
 
           if($queryResults>0){
             while($row= mysqli_fetch_assoc($result)){
-            echo "<form>
+            echo "<form action='editProfile_query.php' method='post'>
 
                   <div class='form-group row'>
                   <label for='firstName' class='col-sm-2 col-form-label'>First Name</label>
                   <div class='col-sm-10'>
-                  <input type='text' class='form-control' id='firstName' placeholder='' value='".$row['fName']."'>
+                  <input name='first' type='text' class='form-control' id='firstName' placeholder='' value='".$row['fName']."'>
                   </div>
                   </div>
 
                   <div class='form-group row pt-4'>
                   <label for='lastName' class='col-sm-2 col-form-label'>Last Name</label>
                   <div class='col-sm-10'>
-                  <input type='text' class='form-control' id='lastName' placeholder='' value='".$row['lName']."'>
+                  <input name='last' type='text' class='form-control' id='lastName' placeholder='' value='".$row['lName']."'>
                   </div>
                   </div>
 
                   <div class='form-group row pt-4'>
                   <label for='dob' class='col-sm-2 col-form-label'>Birth Date</label>
                   <div class='col-sm-10'>
-                  <input type='text' class='form-control' id='dob' placeholder='' value='".$row['dob']."'>
+                  <input name='birth' type='text' class='form-control' id='dob' placeholder='' value='".$row['dob']."'>
                   </div>
                   </div>
 
                   <div class='form-group row pt-4'>
                   <label for='gender' class='col-sm-2 col-form-label'>Gender</label>
                   <div class='col-sm-10'>
-                  <input type='text' class='form-control' id='gender' placeholder='' value='".$row['gender']."'>
+                  <input name='gender' type='text' class='form-control' id='gender' placeholder='' value='".$row['gender']."'>
                   </div>
                   </div>
 
                   <div class='form-group row pt-4'>
                   <label for='email' class='col-sm-2 col-form-label'>Email Address</label>
                   <div class='col-sm-10'>
-                  <input type='email' class='form-control' id='email' placeholder='' value='".$row['email']."'>
+                  <input name='email' type='email' class='form-control' id='email' placeholder='' value='".$row['email']."'>
                   <small class='text-muted'>We won’t share your private email adddress with other fitAesthetic users.</small>
                   </div>
                   </div>
@@ -97,21 +97,21 @@
                   <div class='form-group row pt-4'>
                   <label for='password' class='col-sm-2 col-form-label'>Password</label>
                   <div class='col-sm-10'>
-                  <input type='password' class='form-control' id='password' placeholder='' value='".$row['password']."'>
+                  <input name='password' type='password' class='form-control' id='password' placeholder='' value='".$row['password']."'>
                   </div>
                   </div>
 
                   <div class='form-group row pt-4'>
                   <label for='phone' class='col-sm-2 col-form-label'>Phone Number</label>
                   <div class='col-sm-10'>
-                  <input type='text' class='form-control' id='phone' placeholder='' value='".$row['telno']."'>
+                  <input name='telno' type='text' class='form-control' id='phone' placeholder='' value='".$row['telno']."'>
                   </div>
                   </div>
 
                   <div class='form-group row pt-4'>
                   <label for='address' class='col-sm-2 col-form-label'>Address</label>
                   <div class='col-sm-10'>
-                  <textarea type='text' class='form-control' id='address' placeholder=''>".$row['address']."</textarea>
+                  <textarea name='address' type='text' class='form-control' id='address' placeholder=''>".$row['address']."</textarea>
                   <small class='text-muted'>Your residential address is secure with us.</small>
                   </div>
                   </div>
@@ -121,7 +121,7 @@
 
                   <div class='form-group row pt-4'>
                   <div class='col-sm-10'>
-                  <button type='submit' class='btn white-text-color red-button-color'>Save</button>
+                  <button type='submit' class='btn white-text-color red-button-color' name='update-button'>Save</button>
                   </div>
                   </div>
 
