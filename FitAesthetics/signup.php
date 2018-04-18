@@ -20,11 +20,13 @@ if (isset($_POST['signup-button'])){
   $result = mysqli_query($dbcon,"SELECT * FROM user WHERE email='$email' and password = '$pass'");
   $row= mysqli_fetch_assoc($result);
   $user = $row['userID'];
+  $name = $row['fName'];
 
   session_start();
 
   $_SESSION['email'] = $email;
   $_SESSION['uID'] = $user;
+  $_SESSION['name'] = $name;
 
   header('Location: home.php');
   exit();

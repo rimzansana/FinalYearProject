@@ -22,6 +22,8 @@ if(isset($_POST['submitted'])){
 		$count  = mysqli_num_rows($result);
     $row= mysqli_fetch_assoc($result);
     $user = $row['userID'];
+    $name = $row['fName'];
+
 
 		if($count==0) {
 			$message = "<p>Incorrect username or password! Please try again :)</p>";
@@ -33,6 +35,8 @@ if(isset($_POST['submitted'])){
 			session_start();
 			$_SESSION['email'] = $email;
       $_SESSION['uID'] = $user;
+      $_SESSION['name'] = $name;
+
       header('Location: home.php');
 		}
 	}
