@@ -18,7 +18,7 @@
 
 
                 <li class="nav-item active">
-                    <a class="nav-link white-text-color" href="">About<span class="sr-only">(current)</span></a>
+                    <a class="nav-link white-text-color" href="./editProfile.php">My Profile<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link white-text-color" href="./search.php">View All</a>
