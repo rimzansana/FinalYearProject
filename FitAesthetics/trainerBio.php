@@ -37,88 +37,111 @@
 
   <!-- Profile Header Component -->
 
-    <div class="container my-5 ">
+  <?php
 
-         <div class="row d-flex align-items-center" id="row-height">
+  include('connect_mysql.php');
+  $trainerFirst = mysqli_real_escape_string($dbcon,$_GET['firstname']);
+  $trainerLast = mysqli_real_escape_string($dbcon,$_GET['lastname']);
 
-             <div class="col-sm ">
-                <div class="bio-profile-picture">
-                <img class="flex-auto d-none d-md-block h-100 box-shadow" src="images/Lazar-Bio.jpg" alt="Card image cap" id="profile-picture"/>
-              </div>
-             </div>
+  $sql = "SELECT * FROM trainer WHERE fName='$trainerFirst' AND lName='$trainerLast'";
+  $result = mysqli_query($dbcon,$sql);
+  $queryResults = mysqli_num_rows($result);
 
-             <div class="col-sm size">
-                 <h1>Lazar Angelov</h1>
-                 <p class="lead">Kotte , Sri Jayawardanapura</p>
-                 <br />
-                 <div class="row container">
-                 <p class="lead"><strong>Experience :</strong></p>
-                 <p class="lead ml-1"><strong> 8 Years</strong></p>
+  if($queryResults>0){
+    while($row= mysqli_fetch_assoc($result)){
+      echo "<div class='container my-5'>
+
+             <div class='row d-flex align-items-center' id='row-height'>
+
+                 <div class='col-sm'>
+                    <div class='bio-profile-picture'>
+                    <img class='flex-auto d-none d-md-block h-100 box-shadow' src='images/Lazar-Bio.jpg' alt='Card image cap' id='profile-picture'/>
+                  </div>
                  </div>
-             </div>
 
-             <div class="col-sm d-flex justify-content-end size">
-                <div class="row container d-flex justify-content-end">
-                <p class="lead">5</p>
-                <p class="lead">&nbsp;Reviews</p>
+                 <div class='col-sm size'>
+
+                     <div class='row container'>
+                     <h1 class='text-dark'>".$row['fName']."</h1>
+                     <h1 class='text-dark'>&nbsp;".$row['lName']."</h1>
+                     </div>
+
+                     <p class='lead'>".$row['location']."</p>
+                     <br />
+                     <div class='row container'>
+                     <p class='lead'><strong>Experience :</strong></p>
+                     <p class='lead ml-1'><strong>".$row['experience']." </strong></p>
+                     </div>
                  </div>
-             </div>
+
+                 <div class='col-sm d-flex justify-content-end size'>
+                    <div class='row container d-flex justify-content-end'>
+                    <p class='lead'>5</p>
+                    <p class='lead'>&nbsp;Reviews</p>
+                     </div>
+                 </div>
+
+            </div>
 
         </div>
 
-    </div>
+
+        <!-- Bio body Component -->
+
+        <div class='trainer-bio-bio-body my-3' id='bio-body-height'>
+
+         <div class='container'>
+         <div class='row'>
+              <div class='container col-8'>
+
+                  <!--  Bio text Component -->
+
+                  <p class='lead'>".$row['bio']."</p>
+                  <hr />
+
+                  <!-- Specialization Component -->
+
+                  <div class='row'>
+                  <img src='images/Trophy-icon.png' class='image-prop' />
+                  <h6 class='ml-5'>Specialized in</h6>
+                  </div>
+                  <hr />
+
+                  <!-- Goals Component -->
+
+                  <h6>Goals you could accomplish with me</h6>
+                  <hr />
+
+                  <!-- Reviews Component -->
+                  <div class='row'>
+
+                    <div class='col-sm'>
+                    <h6>Reviews</h6>
+                    </div>
+
+                    <div class='col-sm d-flex justify-content-end'>
+                    <img src='images/Review-icon.png' class='image-prop'/>
+                    </div>
 
 
-    <!-- Bio body Component -->
+                    <div class='my-5 container'>
+                    <p>'He asks how I am doing, demonstrates the movements for weightlifting or anything I am uncomfortable with, and pushes me to do that one extra rep! Time, money, and sweat well spent!'</p>
 
-    <div class="trainer-bio-bio-body my-3" id="bio-body-height">
+                    <div class='row container'>
+                    <p>-</p>
+                    <p>Rimzan Sadikeen</p>
+                    </div>
 
-     <div class="container">
-     <div class="row">
-          <div class="container col-8">
+                    </div>
+                    </div>
 
-              <!--  Bio text Component -->
-
-              <p class="lead ">Before becoming a bodybuilder and a personal trainer, Lazar Angelov played professional basketball for 10 years. He led his team in scoring for multiple seasons and was one of the best point guards of his class. At the age of 16 he joined the junior national team of Bulgaria and played for a couple of teams in the National Basketball Association of Bulgaria. At the age of 18 he spent an year and a half in the Army, where he found his vocation – bodybuilding. It became a constant part of his life and he went on to earn a certificate for a personal trainer from the National Sports Academy. Lazar started working with people, helping them to reach their maximum potential in developing their bodies.</p>
-              <hr />
-
-              <!-- Specialization Component -->
-
-              <div class="row">
-              <img src="images/Trophy-icon.png" class="image-prop" />
-              <h6 class="ml-5">Specialized in</h6>
-              </div>
-              <hr />
-
-              <!-- Goals Component -->
-
-              <h6>Goals you could accomplish with me</h6>
-              <hr />
-
-              <!-- Reviews Component -->
-              <div class="row">
-
-                <div class="col-sm">
-                <h6>Reviews</h6>
-                </div>
-
-                <div class="col-sm d-flex justify-content-end">
-                <img src="images/Review-icon.png" class="image-prop"/>
-                </div>
+              </div>";
+    }
+  }
 
 
-                <div class="my-5">
-                <p>"He asks how I am doing, demonstrates the movements for weightlifting or anything I am uncomfortable with, and pushes me to do that one extra rep! Time, money, and sweat well spent!"</p>
 
-                <div class="row container">
-                <p>-</p>
-                <p>Rimzan Sadikeen</p>
-                </div>
-
-                </div>
-                </div>
-
-          </div>
+          ?>
 
           <!-- Booking box Component -->
 

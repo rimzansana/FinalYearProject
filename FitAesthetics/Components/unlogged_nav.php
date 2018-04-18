@@ -17,7 +17,7 @@
                     <a class="nav-link white-text-color" href="">About<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link white-text-color" href="">Features</a>
+                    <a class="nav-link white-text-color" href="">Search</a>
                 </li>
 
                 <li class="nav-item">
