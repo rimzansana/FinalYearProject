@@ -54,8 +54,8 @@
              <div class='row d-flex align-items-center' id='row-height'>
 
                  <div class='col-sm'>
-                    <div class='bio-profile-picture'>
-                    <img class='flex-auto d-none d-md-block h-100 box-shadow' src='images/Lazar-Bio.jpg' alt='Card image cap' id='profile-picture'/>
+                    <div class='bio-profile-picture' id='profile-picture'>
+                    <img class='flex-auto d-none d-md-block h-100 w-100 box-shadow' src='".$row['image']."' alt='Card image cap' />
                   </div>
                  </div>
 

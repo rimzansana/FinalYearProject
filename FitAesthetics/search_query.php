@@ -30,7 +30,7 @@ if(isset($_POST['search-button'])){
 
       echo "<div class='col-md-6 pt-3'>
         <div class='card flex-md-row mb-4 box-shadow h-md-250'>
-                <img class='card-img-right flex-auto d-none d-md-block h-100' src='images/card-profile.jpg' alt='Card image cap' width='160' />
+                <img class='card-img-right flex-auto d-none d-md-block h-100' src='".$row['image']."' alt='Card image cap' width='160' />
                 <div class='card-body d-flex flex-column align-items-start'>
 
                     <h3 class='mb-0 container'>
@@ -120,7 +120,7 @@ else if(isset($_POST['index-search'])){
 
       echo "<div class='col-md-6 pt-3'>
         <div class='card flex-md-row mb-4 box-shadow h-md-250'>
-                <img class='card-img-right flex-auto d-none d-md-block h-100' src='images/card-profile.jpg' alt='Card image cap' width='160' />
+                <img class='card-img-right flex-auto d-none d-md-block h-100' src='".$row['image']."' alt='Card image cap' width='160' />
                 <div class='card-body d-flex flex-column align-items-start'>
 
                     <h3 class='mb-0 container'>
@@ -210,7 +210,7 @@ else{
 
             echo "<div class='col-md-6 pt-3'>
               <div class='card flex-md-row mb-4 box-shadow h-md-250'>
-                      <img class='card-img-right flex-auto d-none d-md-block h-100' src='images/card-profile.jpg' alt='Card image cap' width='160' />
+                      <img class='card-img-right flex-auto d-none d-md-block h-100' src='".$row['image']."' alt='Card image cap' width='160' />
                       <div class='card-body d-flex flex-column align-items-start'>
 
                           <h3 class='mb-0 container'>
