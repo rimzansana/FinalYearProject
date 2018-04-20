@@ -20,6 +20,9 @@
                 <li class="nav-item active">
                     <a class="nav-link white-text-color" href="./editProfile.php">My Profile<span class="sr-only">(current)</span></a>
                 </li>
+                <li class='nav-item'>
+                    <a class='nav-link white-text-color' href='./mytrainers.php'>My trainers</a>
+                </li>
                 <li class="nav-item">
                     <a class="nav-link white-text-color" href="./search.php">View All</a>
                 </li>

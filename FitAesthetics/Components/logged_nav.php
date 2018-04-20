@@ -21,14 +21,25 @@ echo "<!DOCTYPE html>
                     <a class='nav-link white-text-color' href='./editProfile.php'>My profile<span class='sr-only'>(current)</span></a>
                 </li>
                 <li class='nav-item'>
+                    <a class='nav-link white-text-color' href='./mytrainers.php'>My trainers</a>
+                </li>
+                <li class='nav-item'>
                     <a class='nav-link white-text-color' href='./search.php'>Browse</a>
                 </li>
+
                 <li class='nav-item'>
-                    <a class='nav-link white-text-color' href='./logout.php'>Logout</a>
-                </li>
-                <li class='nav-item'>
-                    <a class='nav-link white-text-color'><em>Hello&nbsp;".$name."</em></a>
-                </li>
+
+              <div class='dropdown pt-1'>
+              <button id='logout' class='dropdown-toggle red-button-color white-text-color' type='text' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
+              ".$name."
+              </button>
+              <div class='dropdown-menu dropdown-menu-right' aria-labelledby='dropdownMenuButton'>
+                <a class='dropdown-item' href='./logout.php'>Log out</a>
+
+              </div>
+              </div>
+
+            </li>
 
             </ul>
         </div>
