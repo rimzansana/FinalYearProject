@@ -12,6 +12,15 @@ if(isset($_POST['search-button'])){
   $result1 = mysqli_query($dbcon,$key);
   $queryResult = mysqli_num_rows($result1);
 
+  //result text condition
+
+  if($queryResult==1){
+      $resultText = 'result';
+      }
+
+      else{
+        $resultText = 'results';
+  }
 
 
   if($queryResult>0){
@@ -20,11 +29,36 @@ if(isset($_POST['search-button'])){
       <div class='row container'>
         <h5><p>We have found</p></h5>
         <h5><p> &nbsp;".$queryResult."</p></h5>
-        <h5><p> &nbsp;results</p></h5>
+
+        <h5><p> &nbsp;$resultText</p></h5>
       </div>
     </div>";
 
     while($row= mysqli_fetch_assoc($result1)){
+
+      // Printing the rating Icon
+
+      if($row['rating']== 5){
+            $rating = '';
+            for ( $i = 0; $i <$row['rating']; $i++ ){
+            $rating .= "<img src='images/Rating.png' alt='Smiley face' height='18' width='18'>";
+          }
+
+          }
+
+          else if($row['rating']== 4) {
+            $rating = '';
+            for ( $i = 0; $i <$row['rating']; $i++ ){
+            $rating .= "<img src='images/Rating.png' alt='Smiley face' height='18' width='18'> ";
+          }
+        }
+
+          else if($row['rating']== 3) {
+            $rating = '';
+            for ( $i = 0; $i <$row['rating']; $i++ ){
+            $rating .= "<img src='images/Rating.png' alt='Smiley face' height='18' width='18'>";
+          }
+      };
 
 
 
@@ -65,7 +99,7 @@ if(isset($_POST['search-button'])){
                         </div>
 
                         <div class='col d-flex justify-content-end'>
-                        *****
+                        $rating
                         </div>
 
                     </div>
@@ -82,7 +116,7 @@ if(isset($_POST['search-button'])){
 
   else{
     echo '<script language="javascript">';
-    echo 'alert("We do not have results , please try again ")';
+    echo 'alert("We did not quite catch that , but hey here are some of the best trainers ")';
     echo '</script>';
 
 
@@ -90,18 +124,51 @@ if(isset($_POST['search-button'])){
           $result = mysqli_query($dbcon,$sql);
           $queryResults = mysqli_num_rows($result);
 
+          //result text condition
+
+          if($queryResults==1){
+            $resultText = 'result';
+            }
+
+            else{
+              $resultText = 'results';
+          }
+
           if($queryResults>0){
 
             echo "<div class='container'>
               <div class='row container'>
                 <h5><p>We have found</p></h5>
                 <h5><p> &nbsp;".$queryResults."</p></h5>
-                <h5><p> &nbsp;results</p></h5>
+                <h5><p> &nbsp;$resultText</p></h5>
               </div>
             </div>";
 
               while($row= mysqli_fetch_assoc($result)){
 
+                // Printing the rating Icon
+
+                if($row['rating']== 5){
+                      $rating = '';
+                      for ( $i = 0; $i <$row['rating']; $i++ ){
+                      $rating .= "<img src='images/Rating.png' alt='Smiley face' height='18' width='18'>";
+                    }
+
+                    }
+
+                    else if($row['rating']== 4) {
+                      $rating = '';
+                      for ( $i = 0; $i <$row['rating']; $i++ ){
+                      $rating .= "<img src='images/Rating.png' alt='Smiley face' height='18' width='18'> ";
+                    }
+                  }
+
+                    else if($row['rating']== 3) {
+                      $rating = '';
+                      for ( $i = 0; $i <$row['rating']; $i++ ){
+                      $rating .= "<img src='images/Rating.png' alt='Smiley face' height='18' width='18'>";
+                    }
+                };
 
 
                 echo "<div class='col-md-6 pt-3'>
@@ -141,7 +208,7 @@ if(isset($_POST['search-button'])){
                                   </div>
 
                                   <div class='col d-flex justify-content-end'>
-                                  *****
+                                  $rating
                                   </div>
 
                               </div>
@@ -180,7 +247,15 @@ else if(isset($_POST['index-search'])){
   $result1 = mysqli_query($dbcon,$key);
   $queryResult = mysqli_num_rows($result1);
 
+  //result text condition
 
+  if($queryResult==1){
+    $resultText = 'result';
+    }
+
+    else{
+      $resultText = 'results';
+  }
 
   if($queryResult>0){
 
@@ -188,11 +263,36 @@ else if(isset($_POST['index-search'])){
       <div class='row container'>
         <h5><p>We have found</p></h5>
         <h5><p> &nbsp;".$queryResult."</p></h5>
-        <h5><p> &nbsp;results</p></h5>
+        <h5><p> &nbsp;$resultText</p></h5>
       </div>
     </div>";
 
     while($row= mysqli_fetch_assoc($result1)){
+
+      // Printing the rating Icon
+
+      if($row['rating']== 5){
+            $rating = '';
+            for ( $i = 0; $i <$row['rating']; $i++ ){
+            $rating .= "<img src='images/Rating.png' alt='Smiley face' height='18' width='18'>";
+          }
+
+          }
+
+          else if($row['rating']== 4) {
+            $rating = '';
+            for ( $i = 0; $i <$row['rating']; $i++ ){
+            $rating .= "<img src='images/Rating.png' alt='Smiley face' height='18' width='18'> ";
+          }
+        }
+
+          else if($row['rating']== 3) {
+            $rating = '';
+            for ( $i = 0; $i <$row['rating']; $i++ ){
+            $rating .= "<img src='images/Rating.png' alt='Smiley face' height='18' width='18'>";
+          }
+      };
+
 
 
       echo "<div class='col-md-6 pt-3'>
@@ -232,7 +332,7 @@ else if(isset($_POST['index-search'])){
                         </div>
 
                         <div class='col d-flex justify-content-end'>
-                        *****
+                        $rating
                         </div>
 
                     </div>
@@ -249,7 +349,7 @@ else if(isset($_POST['index-search'])){
 
   else{
     echo '<script language="javascript">';
-    echo 'alert("We do not have results , please try again ")';
+    echo 'alert("We did not quite catch that , but hey here are some of the best trainers ")';
     echo '</script>';
 
 
@@ -269,6 +369,29 @@ else if(isset($_POST['index-search'])){
 
               while($row= mysqli_fetch_assoc($result)){
 
+                // Printing the rating Icon
+
+                if($row['rating']== 5){
+                      $rating = '';
+                      for ( $i = 0; $i <$row['rating']; $i++ ){
+                      $rating .= "<img src='images/Rating.png' alt='Smiley face' height='18' width='18'>";
+                    }
+
+                    }
+
+                    else if($row['rating']== 4) {
+                      $rating = '';
+                      for ( $i = 0; $i <$row['rating']; $i++ ){
+                      $rating .= "<img src='images/Rating.png' alt='Smiley face' height='18' width='18'> ";
+                    }
+                  }
+
+                    else if($row['rating']== 3) {
+                      $rating = '';
+                      for ( $i = 0; $i <$row['rating']; $i++ ){
+                      $rating .= "<img src='images/Rating.png' alt='Smiley face' height='18' width='18'>";
+                    }
+                };
 
 
                 echo "<div class='col-md-6 pt-3'>
@@ -308,7 +431,7 @@ else if(isset($_POST['index-search'])){
                                   </div>
 
                                   <div class='col d-flex justify-content-end'>
-                                  *****
+                                  $rating
                                   </div>
 
                               </div>
@@ -348,19 +471,31 @@ else{
       $result = mysqli_query($dbcon,$sql);
       $queryResults = mysqli_num_rows($result);
 
+      if($queryResults==1){
+        $resultText = 'result';
+      }
+
+      else{
+        $resultText = 'results';
+      }
+
+
+
       if($queryResults>0){
 
         echo "<div class='container'>
           <div class='row container'>
             <h5><p>We have found</p></h5>
             <h5><p> &nbsp;".$queryResults."</p></h5>
-            <h5><p> &nbsp;results</p></h5>
+            <h5><p> &nbsp;$resultText</p></h5>
           </div>
         </div>";
 
           while($row= mysqli_fetch_assoc($result)){
 
-          if($row['rating']== 5){
+      // Printing the rating Icon
+
+      if($row['rating']== 5){
             $rating = '';
             for ( $i = 0; $i <$row['rating']; $i++ ){
             $rating .= "<img src='images/Rating.png' alt='Smiley face' height='18' width='18'>";
@@ -380,7 +515,7 @@ else{
             for ( $i = 0; $i <$row['rating']; $i++ ){
             $rating .= "<img src='images/Rating.png' alt='Smiley face' height='18' width='18'>";
           }
-        };
+      };
 
 
 
