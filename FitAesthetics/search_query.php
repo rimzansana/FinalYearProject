@@ -46,19 +46,33 @@ if(isset($_POST['search-button'])){
 
           }
 
-          else if($row['rating']== 4) {
-            $rating = '';
-            for ( $i = 0; $i <$row['rating']; $i++ ){
-            $rating .= "<img src='images/Rating.png' alt='Smiley face' height='18' width='18'> ";
-          }
-        }
+              else if($row['rating']== 4) {
+                $rating = '';
+                for ( $i = 0; $i <$row['rating']; $i++ ){
+                $rating .= "<img src='images/Rating.png' alt='Smiley face' height='18' width='18'> ";
+              }
+            }
 
-          else if($row['rating']== 3) {
+              else if($row['rating']== 3) {
+                $rating = '';
+                for ( $i = 0; $i <$row['rating']; $i++ ){
+                $rating .= "<img src='images/Rating.png' alt='Smiley face' height='18' width='18'>";
+              }
+          }
+
+          else if($row['rating']== 2) {
             $rating = '';
             for ( $i = 0; $i <$row['rating']; $i++ ){
             $rating .= "<img src='images/Rating.png' alt='Smiley face' height='18' width='18'>";
+              }
           }
-      };
+
+        else if($row['rating']== 1) {
+          $rating = '';
+          for ( $i = 0; $i <$row['rating']; $i++ ){
+          $rating .= "<img src='images/Rating.png' alt='Smiley face' height='18' width='18'>";
+              }
+      }
 
 
 
@@ -160,19 +174,33 @@ if(isset($_POST['search-button'])){
 
                     }
 
-                    else if($row['rating']== 4) {
-                      $rating = '';
-                      for ( $i = 0; $i <$row['rating']; $i++ ){
-                      $rating .= "<img src='images/Rating.png' alt='Smiley face' height='18' width='18'> ";
-                    }
-                  }
+                        else if($row['rating']== 4) {
+                          $rating = '';
+                          for ( $i = 0; $i <$row['rating']; $i++ ){
+                          $rating .= "<img src='images/Rating.png' alt='Smiley face' height='18' width='18'> ";
+                        }
+                      }
 
-                    else if($row['rating']== 3) {
+                        else if($row['rating']== 3) {
+                          $rating = '';
+                          for ( $i = 0; $i <$row['rating']; $i++ ){
+                          $rating .= "<img src='images/Rating.png' alt='Smiley face' height='18' width='18'>";
+                        }
+                    }
+
+                    else if($row['rating']== 2) {
                       $rating = '';
                       for ( $i = 0; $i <$row['rating']; $i++ ){
                       $rating .= "<img src='images/Rating.png' alt='Smiley face' height='18' width='18'>";
+                        }
                     }
-                };
+
+                  else if($row['rating']== 1) {
+                    $rating = '';
+                    for ( $i = 0; $i <$row['rating']; $i++ ){
+                    $rating .= "<img src='images/Rating.png' alt='Smiley face' height='18' width='18'>";
+                        }
+                }
 
 
                 echo "<div class='col-md-6 pt-3'>
@@ -283,19 +311,33 @@ else if(isset($_POST['index-search'])){
 
           }
 
-          else if($row['rating']== 4) {
-            $rating = '';
-            for ( $i = 0; $i <$row['rating']; $i++ ){
-            $rating .= "<img src='images/Rating.png' alt='Smiley face' height='18' width='18'> ";
-          }
-        }
+              else if($row['rating']== 4) {
+                $rating = '';
+                for ( $i = 0; $i <$row['rating']; $i++ ){
+                $rating .= "<img src='images/Rating.png' alt='Smiley face' height='18' width='18'> ";
+              }
+            }
 
-          else if($row['rating']== 3) {
+              else if($row['rating']== 3) {
+                $rating = '';
+                for ( $i = 0; $i <$row['rating']; $i++ ){
+                $rating .= "<img src='images/Rating.png' alt='Smiley face' height='18' width='18'>";
+              }
+          }
+
+          else if($row['rating']== 2) {
             $rating = '';
             for ( $i = 0; $i <$row['rating']; $i++ ){
             $rating .= "<img src='images/Rating.png' alt='Smiley face' height='18' width='18'>";
+              }
           }
-      };
+
+        else if($row['rating']== 1) {
+          $rating = '';
+          for ( $i = 0; $i <$row['rating']; $i++ ){
+          $rating .= "<img src='images/Rating.png' alt='Smiley face' height='18' width='18'>";
+              }
+      }
 
 
 
@@ -386,19 +428,33 @@ else if(isset($_POST['index-search'])){
 
                     }
 
-                    else if($row['rating']== 4) {
-                      $rating = '';
-                      for ( $i = 0; $i <$row['rating']; $i++ ){
-                      $rating .= "<img src='images/Rating.png' alt='Smiley face' height='18' width='18'> ";
-                    }
-                  }
+                        else if($row['rating']== 4) {
+                          $rating = '';
+                          for ( $i = 0; $i <$row['rating']; $i++ ){
+                          $rating .= "<img src='images/Rating.png' alt='Smiley face' height='18' width='18'> ";
+                        }
+                      }
 
-                    else if($row['rating']== 3) {
+                        else if($row['rating']== 3) {
+                          $rating = '';
+                          for ( $i = 0; $i <$row['rating']; $i++ ){
+                          $rating .= "<img src='images/Rating.png' alt='Smiley face' height='18' width='18'>";
+                        }
+                    }
+
+                    else if($row['rating']== 2) {
                       $rating = '';
                       for ( $i = 0; $i <$row['rating']; $i++ ){
                       $rating .= "<img src='images/Rating.png' alt='Smiley face' height='18' width='18'>";
+                        }
                     }
-                };
+
+                  else if($row['rating']== 1) {
+                    $rating = '';
+                    for ( $i = 0; $i <$row['rating']; $i++ ){
+                    $rating .= "<img src='images/Rating.png' alt='Smiley face' height='18' width='18'>";
+                        }
+                }
 
 
                 echo "<div class='col-md-6 pt-3'>
@@ -510,19 +566,33 @@ else{
 
           }
 
-          else if($row['rating']== 4) {
-            $rating = '';
-            for ( $i = 0; $i <$row['rating']; $i++ ){
-            $rating .= "<img src='images/Rating.png' alt='Smiley face' height='18' width='18'> ";
-          }
-        }
+              else if($row['rating']== 4) {
+                $rating = '';
+                for ( $i = 0; $i <$row['rating']; $i++ ){
+                $rating .= "<img src='images/Rating.png' alt='Smiley face' height='18' width='18'> ";
+              }
+            }
 
-          else if($row['rating']== 3) {
+              else if($row['rating']== 3) {
+                $rating = '';
+                for ( $i = 0; $i <$row['rating']; $i++ ){
+                $rating .= "<img src='images/Rating.png' alt='Smiley face' height='18' width='18'>";
+              }
+          }
+
+          else if($row['rating']== 2) {
             $rating = '';
             for ( $i = 0; $i <$row['rating']; $i++ ){
             $rating .= "<img src='images/Rating.png' alt='Smiley face' height='18' width='18'>";
+              }
           }
-      };
+
+        else if($row['rating']== 1) {
+          $rating = '';
+          for ( $i = 0; $i <$row['rating']; $i++ ){
+          $rating .= "<img src='images/Rating.png' alt='Smiley face' height='18' width='18'>";
+              }
+      }
 
 
 

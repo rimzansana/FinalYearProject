@@ -47,8 +47,47 @@
   $result = mysqli_query($dbcon,$sql);
   $queryResults = mysqli_num_rows($result);
 
+
+
   if($queryResults>0){
     while($row= mysqli_fetch_assoc($result)){
+
+      if($row['rating']== 5){
+            $rating = '';
+            for ( $i = 0; $i <$row['rating']; $i++ ){
+            $rating .= "<img src='images/Rating.png' alt='Smiley face' height='23' width='23'>";
+          }
+
+          }
+
+              else if($row['rating']== 4) {
+                $rating = '';
+                for ( $i = 0; $i <$row['rating']; $i++ ){
+                $rating .= "<img src='images/Rating.png' alt='Smiley face' height='23' width='23'> ";
+              }
+            }
+
+              else if($row['rating']== 3) {
+                $rating = '';
+                for ( $i = 0; $i <$row['rating']; $i++ ){
+                $rating .= "<img src='images/Rating.png' alt='Smiley face' height='23' width='23'>";
+              }
+          }
+
+          else if($row['rating']== 2) {
+            $rating = '';
+            for ( $i = 0; $i <$row['rating']; $i++ ){
+            $rating .= "<img src='images/Rating.png' alt='Smiley face' height='23' width='23'>";
+              }
+          }
+
+        else if($row['rating']== 1) {
+          $rating = '';
+          for ( $i = 0; $i <$row['rating']; $i++ ){
+          $rating .= "<img src='images/Rating.png' alt='Smiley face' height='23' width='23'>";
+              }
+      }
+
       echo "<div class='container my-5 pt-5'>
 
              <div class='row d-flex align-items-center' id='row-height'>
@@ -77,8 +116,7 @@
 
                  <div class='col-sm d-flex justify-content-end size'>
                     <div class='row container d-flex justify-content-end'>
-                    <p class='lead'>5</p>
-                    <p class='lead'>&nbsp;Reviews</p>
+                    $rating
                      </div>
                  </div>
 
