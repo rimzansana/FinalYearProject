@@ -362,15 +362,27 @@ else{
 
           if($row['rating']== 5){
             $rating = '';
-            for ( $i = 0; $i <=$row['rating']; $i++ ){
-            $rating .= "<option ...>".$i."</option>";
-  }
+            for ( $i = 0; $i <$row['rating']; $i++ ){
+            $rating .= "<img src='images/Rating.png' alt='Smiley face' height='18' width='18'>";
+          }
 
           }
 
-          else {
-            $rating = 'Its less than five';
-          };
+          else if($row['rating']== 4) {
+            $rating = '';
+            for ( $i = 0; $i <$row['rating']; $i++ ){
+            $rating .= "<img src='images/Rating.png' alt='Smiley face' height='18' width='18'> ";
+          }
+        }
+
+          else if($row['rating']== 3) {
+            $rating = '';
+            for ( $i = 0; $i <$row['rating']; $i++ ){
+            $rating .= "<img src='images/Rating.png' alt='Smiley face' height='18' width='18'>";
+          }
+        };
+
+
 
 
             echo "<div class='col-md-6 pt-3'>
