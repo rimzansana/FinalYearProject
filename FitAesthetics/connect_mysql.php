@@ -3,7 +3,7 @@
 DEFINE('DB_USER', 'root');
 DEFINE('DB_PSWD', '');
 DEFINE('DB_HOST', 'localhost');
-DEFINE('DB_NAME', 'Test');
+DEFINE('DB_NAME', 'MyFitAesthetics');
 
 
 // Create connection

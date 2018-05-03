@@ -48,6 +48,7 @@ if(isset($_POST['search-button'])){
                     <div class='row my-3'>
                     <p> Experience : </p>
                     <p> &nbsp; ".$row['experience']."</p>
+                    <p> &nbsp;Years</p>
                     </div>
 
                     <div class='row mb-auto'>
@@ -123,6 +124,7 @@ if(isset($_POST['search-button'])){
                               <div class='row my-3'>
                               <p> Experience : </p>
                               <p> &nbsp; ".$row['experience']."</p>
+                              <p> &nbsp;Years</p>
                               </div>
 
                               <div class='row mb-auto'>
@@ -213,6 +215,7 @@ else if(isset($_POST['index-search'])){
                     <div class='row my-3'>
                     <p> Experience : </p>
                     <p> &nbsp; ".$row['experience']."</p>
+                    <p> &nbsp;Years</p>
                     </div>
 
                     <div class='row mb-auto'>
@@ -288,6 +291,7 @@ else if(isset($_POST['index-search'])){
                               <div class='row my-3'>
                               <p> Experience : </p>
                               <p> &nbsp; ".$row['experience']."</p>
+                              <p> &nbsp;Years</p>
                               </div>
 
                               <div class='row mb-auto'>
@@ -356,6 +360,17 @@ else{
 
           while($row= mysqli_fetch_assoc($result)){
 
+          if($row['rating']== 5){
+            $rating = '';
+            for ( $i = 0; $i <=$row['rating']; $i++ ){
+            $rating .= "<option ...>".$i."</option>";
+  }
+
+          }
+
+          else {
+            $rating = 'Its less than five';
+          };
 
 
             echo "<div class='col-md-6 pt-3'>
@@ -378,6 +393,7 @@ else{
                           <div class='row my-3'>
                           <p> Experience : </p>
                           <p> &nbsp; ".$row['experience']."</p>
+                          <p> &nbsp;Years</p>
                           </div>
 
                           <div class='row mb-auto'>
@@ -394,7 +410,7 @@ else{
                               </div>
 
                               <div class='col d-flex justify-content-end'>
-                              *****
+                              $rating
                               </div>
 
                           </div>

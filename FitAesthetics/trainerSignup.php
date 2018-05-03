@@ -73,14 +73,8 @@
         </div>
 
         <div class="form-group my-5 w-75">
-            <label>Select your area of expertise</label>
-            <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref" name="expertise">
-              <option default>Choose...</option>
-              <option value="1">Bodybuilding</option>
-              <option value="2">Calisthenics</option>
-              <option value="3">Bodyweight training</option>
-              <option value="4">Cardio training</option>
-            </select>
+          <label>What is your area of expertise?</label>
+          <input type="text" class="form-control" placeholder="ex : ‘Calisthenics’" aria-describedby="h-3" name="expertise" required/>
          </div>
 
 
