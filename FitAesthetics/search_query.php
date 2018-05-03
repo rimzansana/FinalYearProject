@@ -115,9 +115,13 @@ if(isset($_POST['search-button'])){
   }}
 
   else{
-    echo '<script language="javascript">';
-    echo 'alert("We did not quite catch that , but hey here are some of the best trainers ")';
-    echo '</script>';
+    echo "<div class='alert alert-danger alert-dismissible fade show w-100' role='alert'>
+    <strong>Holy guacamole we couldnt find a match :(</strong> &nbsp;&nbsp;Check out these featured trainers below.
+    <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
+      <span aria-hidden='true'>&times;</span>
+    </button>
+    </div>";
+
 
 
           $sql = "SELECT * FROM trainer";
@@ -348,9 +352,12 @@ else if(isset($_POST['index-search'])){
   }}
 
   else{
-    echo '<script language="javascript">';
-    echo 'alert("We did not quite catch that , but hey here are some of the best trainers ")';
-    echo '</script>';
+    echo "<div class='alert alert-danger alert-dismissible fade show w-100' role='alert'>
+    <strong>Holy guacamole we couldnt find a match :(</strong> &nbsp;&nbsp;Check out these featured trainers below.
+    <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
+      <span aria-hidden='true'>&times;</span>
+    </button>
+    </div>";
 
 
           $sql = "SELECT * FROM trainer";
