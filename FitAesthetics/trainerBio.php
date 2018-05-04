@@ -285,7 +285,7 @@
                       <input type='hidden' value='$trainerID' name='trainerID'>
 
                          <div class='input-group date w-100' data-date-format='yyyy-mm-dd'>
-                         <input class='form-control' type='date' name='startDate'>
+                         <input class='form-control' type='date' name='startDate' required>
                          <span class='input-group-addon'></span>
                          </div>
 
@@ -296,7 +296,7 @@
                        <div class='col-9'>
 
                          <div class='input-group date w-100' data-date-format='yyyy-mm-dd'>
-                         <input class='form-control' type='date' name='endDate'>
+                         <input class='form-control' type='date' name='endDate' required>
                          <span class='input-group-addon'></span>
                          </div>
 
