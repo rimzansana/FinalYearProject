@@ -88,7 +88,7 @@
                 }
         }
 
-        echo "<div class='container my-5 pt-5'>
+    echo "<div class='container my-5 pt-5'>
 
                <div class='row d-flex align-items-center' id='row-height'>
 
@@ -242,22 +242,33 @@
 
           <!-- Booking box Component -->
 
-          <div class="col-4 w-100" id="booking-box-settings">
+    <?php
 
-              <div class="container d-flex justify-content-center " id="sticky">
-              <div class="card-deck mb-3 text-center">
-              <div class="card mb-4 box-shadow">
+          //Getting the trainer fee
 
-                <div class="card-header d-flex justify-content-center">
-                    <div class="row">
-                    <h5>Rs.</h5>
-                    <h5 class="my-0 font-weight-normal">20000
-                    <small class="text-muted"> per month</small>
-                    </h5>
-                    </div>
-                </div>
+            $trainerID = mysqli_real_escape_string($dbcon,$_GET['id']);
+            $sql = "SELECT * FROM trainer WHERE trainerID='$trainerID'";
+            $result = mysqli_query($dbcon,$sql);
 
 
+            echo "<div class='col-4 w-100' id='booking-box-settings'>
+
+                <div class='container d-flex justify-content-center' id='sticky'>
+                <div class='card-deck mb-3 text-center'>
+                <div class='card mb-4 box-shadow'>
+
+                  <div class='card-header d-flex justify-content-center'>
+                      <div class='row'>
+                      <h5>Rs.</h5>";
+                      while($row= mysqli_fetch_assoc($result)){
+                      echo "<h5 class='my-0 font-weight-normal'>".$row['fee']."";
+                      }
+                    echo "<small class='text-muted'> per month</small>
+                      </h5>
+                      </div>
+                  </div>";
+
+    ?>
                 <div class="card-body">
 
                   <div class="row ml-4">
