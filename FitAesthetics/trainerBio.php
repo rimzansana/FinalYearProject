@@ -39,111 +39,148 @@
 
   <?php
 
-  include('connect_mysql.php');
-  $trainerID = mysqli_real_escape_string($dbcon,$_GET['id']);
+    include('connect_mysql.php');
+    $trainerID = mysqli_real_escape_string($dbcon,$_GET['id']);
 
 
-  $sql = "SELECT * FROM trainer WHERE trainerID='$trainerID'";
-  $result = mysqli_query($dbcon,$sql);
-  $queryResults = mysqli_num_rows($result);
+    $sql = "SELECT * FROM trainer WHERE trainerID='$trainerID'";
+    $result = mysqli_query($dbcon,$sql);
+    $queryResults = mysqli_num_rows($result);
 
 
 
-  if($queryResults>0){
-    while($row= mysqli_fetch_assoc($result)){
+    if($queryResults>0){
+      while($row= mysqli_fetch_assoc($result)){
 
-      if($row['rating']== 5){
-            $rating = '';
-            for ( $i = 0; $i <$row['rating']; $i++ ){
-            $rating .= "<img src='images/Rating.png' alt='Smiley face' height='23' width='23'>";
-          }
-
-          }
-
-              else if($row['rating']== 4) {
-                $rating = '';
-                for ( $i = 0; $i <$row['rating']; $i++ ){
-                $rating .= "<img src='images/Rating.png' alt='Smiley face' height='23' width='23'> ";
-              }
+        if($row['rating']== 5){
+              $rating = '';
+              for ( $i = 0; $i <$row['rating']; $i++ ){
+              $rating .= "<img src='images/Rating.png' alt='Smiley face' height='23' width='23'>";
             }
 
-              else if($row['rating']== 3) {
-                $rating = '';
-                for ( $i = 0; $i <$row['rating']; $i++ ){
-                $rating .= "<img src='images/Rating.png' alt='Smiley face' height='23' width='23'>";
-              }
-          }
+            }
 
-          else if($row['rating']== 2) {
+                else if($row['rating']== 4) {
+                  $rating = '';
+                  for ( $i = 0; $i <$row['rating']; $i++ ){
+                  $rating .= "<img src='images/Rating.png' alt='Smiley face' height='23' width='23'> ";
+                }
+              }
+
+                else if($row['rating']== 3) {
+                  $rating = '';
+                  for ( $i = 0; $i <$row['rating']; $i++ ){
+                  $rating .= "<img src='images/Rating.png' alt='Smiley face' height='23' width='23'>";
+                }
+            }
+
+            else if($row['rating']== 2) {
+              $rating = '';
+              for ( $i = 0; $i <$row['rating']; $i++ ){
+              $rating .= "<img src='images/Rating.png' alt='Smiley face' height='23' width='23'>";
+                }
+            }
+
+          else if($row['rating']== 1) {
             $rating = '';
             for ( $i = 0; $i <$row['rating']; $i++ ){
             $rating .= "<img src='images/Rating.png' alt='Smiley face' height='23' width='23'>";
-              }
+                }
+        }
+
+        echo "<div class='container my-5 pt-5'>
+
+               <div class='row d-flex align-items-center' id='row-height'>
+
+                   <div class='col-sm'>
+                      <div class='bio-profile-picture' id='profile-picture'>
+                      <img class='flex-auto d-none d-md-block h-100 w-100 box-shadow' src='".$row['image']."' alt='Card image cap' />
+                    </div>
+                   </div>
+
+                   <div class='col-sm size'>
+
+                       <div class='row container'>
+                       <h1 class='text-dark'>".$row['fName']."</h1>
+                       <h1 class='text-dark'>&nbsp;".$row['lName']."</h1>
+                       </div>
+
+                       <p class='lead'>".$row['location']."</p>
+                       <br />
+                       <div class='row container'>
+                       <p class='lead'><strong>Experience :</strong></p>
+                       <p class='lead ml-1'><strong>".$row['experience']."</strong></p>
+                       <p class='lead ml-1'><strong>&nbsp;Years</strong></p>
+                       </div>
+                   </div>
+
+                   <div class='col-sm d-flex justify-content-end size'>
+                      <div class='row container d-flex justify-content-end'>
+                      $rating
+                       </div>
+                   </div>
+
+              </div>
+
+          </div>
+
+
+          <!-- Bio body Component -->
+
+          <div class='trainer-bio-bio-body my-3' id='bio-body-height'>
+
+           <div class='container'>
+           <div class='row'>
+                <div class='container col-8'>
+
+                    <!--  Bio text Component -->
+
+                    <p class='lead'>".$row['bio']."</p>
+                    <hr />";
           }
-
-        else if($row['rating']== 1) {
-          $rating = '';
-          for ( $i = 0; $i <$row['rating']; $i++ ){
-          $rating .= "<img src='images/Rating.png' alt='Smiley face' height='23' width='23'>";
-              }
-      }
-
-      echo "<div class='container my-5 pt-5'>
-
-             <div class='row d-flex align-items-center' id='row-height'>
-
-                 <div class='col-sm'>
-                    <div class='bio-profile-picture' id='profile-picture'>
-                    <img class='flex-auto d-none d-md-block h-100 w-100 box-shadow' src='".$row['image']."' alt='Card image cap' />
-                  </div>
-                 </div>
-
-                 <div class='col-sm size'>
-
-                     <div class='row container'>
-                     <h1 class='text-dark'>".$row['fName']."</h1>
-                     <h1 class='text-dark'>&nbsp;".$row['lName']."</h1>
-                     </div>
-
-                     <p class='lead'>".$row['location']."</p>
-                     <br />
-                     <div class='row container'>
-                     <p class='lead'><strong>Experience :</strong></p>
-                     <p class='lead ml-1'><strong>".$row['experience']."</strong></p>
-                     <p class='lead ml-1'><strong>&nbsp;Years</strong></p>
-                     </div>
-                 </div>
-
-                 <div class='col-sm d-flex justify-content-end size'>
-                    <div class='row container d-flex justify-content-end'>
-                    $rating
-                     </div>
-                 </div>
-
-            </div>
-
-        </div>
+        }
 
 
-        <!-- Bio body Component -->
 
-        <div class='trainer-bio-bio-body my-3' id='bio-body-height'>
+  ?>
 
-         <div class='container'>
-         <div class='row'>
-              <div class='container col-8'>
 
-                  <!--  Bio text Component -->
+    <!-- Specialization Component -->
 
-                  <p class='lead'>".$row['bio']."</p>
-                  <hr />
 
+    <?php
+
+              $trainerID = mysqli_real_escape_string($dbcon,$_GET['id']);
+
+              $sql = "SELECT specialization.specializationName
+              FROM trainerspecialization
+              INNER JOIN specialization
+              ON trainerspecialization.specializationID=specialization.specializationID
+              INNER JOIN trainer
+              ON trainerspecialization.trainerID=trainer.trainerID
+              WHERE trainer.trainerID='$trainerID'";
+
+
+
+              $result = mysqli_query($dbcon,$sql);
+
+              echo "
                   <!-- Specialization Component -->
 
                   <div class='row'>
                   <img src='images/Trophy-icon.png' class='image-prop' />
                   <h6 class='ml-5'>Specialized in</h6>
                   </div>
+                  <ul class='my-5'>";
+
+                      //Printing the specializations
+
+                      while($row= mysqli_fetch_assoc($result)){
+                      echo "<li>".$row['specializationName']."</li>";
+                      }
+
+
+                  echo "</ul>
                   <hr />
 
                   <!-- Goals Component -->
@@ -175,12 +212,11 @@
                     </div>
 
               </div>";
-    }
-  }
 
 
+  ?>
 
-          ?>
+
 
           <!-- Booking box Component -->
 
