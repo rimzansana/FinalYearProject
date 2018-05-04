@@ -152,7 +152,8 @@
 
               $trainerID = mysqli_real_escape_string($dbcon,$_GET['id']);
 
-              $sql = "SELECT specialization.specializationName
+              //Retrieving specilizations
+              $sqlSpecialization = "SELECT specialization.specializationName
               FROM trainerspecialization
               INNER JOIN specialization
               ON trainerspecialization.specializationID=specialization.specializationID
@@ -160,9 +161,19 @@
               ON trainerspecialization.trainerID=trainer.trainerID
               WHERE trainer.trainerID='$trainerID'";
 
+              $specializationResult = mysqli_query($dbcon,$sqlSpecialization);
 
+              //Retrieving goals
+              $sqlGoal = "SELECT goal.goalName
+              FROM trainergoal
+              INNER JOIN goal
+              ON trainergoal.goalID=goal.goalID
+              INNER JOIN trainer
+              ON trainergoal.trainerID=trainer.trainerID
+              WHERE trainer.trainerID='$trainerID'";
 
-              $result = mysqli_query($dbcon,$sql);
+              $goalResult = mysqli_query($dbcon,$sqlGoal);
+
 
               echo "
                   <!-- Specialization Component -->
@@ -171,11 +182,11 @@
                   <img src='images/Trophy-icon.png' class='image-prop' />
                   <h6 class='ml-5'>Specialized in</h6>
                   </div>
-                  <ul class='my-5'>";
+                  <ul class='my-4 p-1'>";
 
                       //Printing the specializations
 
-                      while($row= mysqli_fetch_assoc($result)){
+                      while($row= mysqli_fetch_assoc($specializationResult)){
                       echo "<li>".$row['specializationName']."</li>";
                       }
 
@@ -186,8 +197,19 @@
                   <!-- Goals Component -->
 
                   <h6>Goals you could accomplish with me</h6>
-                  <hr />
 
+                  <ul class='my-4 p-1'>";
+
+                      //Printing the goals
+
+                      while($row= mysqli_fetch_assoc( $goalResult)){
+                      echo "<li>".$row['goalName']."</li>";
+                      }
+
+
+                  echo "</ul>
+
+                  <hr />
                   <!-- Reviews Component -->
                   <div class='row'>
 
