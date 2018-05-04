@@ -26,6 +26,7 @@ if(isset($_SESSION['uID'])){
 
   $_SESSION['months'] = $months;
   $_SESSION['trainerID'] = $trainerID;
+
   header('Location: bookingInfo.php');
 }
 
