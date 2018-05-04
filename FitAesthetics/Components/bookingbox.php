@@ -4,6 +4,7 @@
   include('connect_mysql.php');
 
   $trainerID = $_SESSION['trainerID'];
+  $totalFee =  $_SESSION['totalFee'];
   $months = $_SESSION['months'];
   $sql = "SELECT * FROM trainer WHERE trainerID='$trainerID'";
   $result = mysqli_query($dbcon,$sql);
@@ -118,7 +119,7 @@ echo "<div class='col d-flex justify-content-end'>
                   <div class='d-flex justify-content-end mr-3'>
                   <div class='row'>
                   <p><strong>Rs.</strong> </p>
-                  <p><strong>&nbsp;120000</strong></p>
+                  <p><strong>&nbsp;$totalFee</strong></p>
                   </div>
                   </div>
 
