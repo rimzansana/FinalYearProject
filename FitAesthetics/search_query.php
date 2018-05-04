@@ -109,7 +109,7 @@ if(isset($_POST['search-button'])){
 
                     <div class='row'>
                         <div class='col w-50'>
-                        <a href='trainerBio.php?firstname=".$row['fName']."&lastname=".$row['lName']."' id='text-decoration-none'>View Profile</a>
+                        <a href='trainerBio.php?id=".$row['trainerID']."' id='text-decoration-none'>View Profile</a>
                         </div>
 
                         <div class='col d-flex justify-content-end'>
@@ -236,7 +236,7 @@ if(isset($_POST['search-button'])){
 
                               <div class='row'>
                                   <div class='col w-50'>
-                                  <a href='trainerBio.php?firstname=".$row['fName']."&lastname=".$row['lName']."' id='text-decoration-none'>View Profile</a>
+                                  <a href='trainerBio.php?id=".$row['trainerID']."' id='text-decoration-none'>View Profile</a>
                                   </div>
 
                                   <div class='col d-flex justify-content-end'>
@@ -374,7 +374,7 @@ else if(isset($_POST['index-search'])){
 
                     <div class='row'>
                         <div class='col w-50'>
-                        <a href='trainerBio.php?firstname=".$row['fName']."&lastname=".$row['lName']."' id='text-decoration-none'>View Profile</a>
+                        <a href='trainerBio.php?id=".$row['trainerID']."' id='text-decoration-none'>View Profile</a>
                         </div>
 
                         <div class='col d-flex justify-content-end'>
@@ -490,7 +490,7 @@ else if(isset($_POST['index-search'])){
 
                               <div class='row'>
                                   <div class='col w-50'>
-                                  <a href='trainerBio.php?firstname=".$row['fName']."&lastname=".$row['lName']."' id='text-decoration-none'>View Profile</a>
+                                  <a href='trainerBio.php?id=".$row['trainerID']."' id='text-decoration-none'>View Profile</a>
                                   </div>
 
                                   <div class='col d-flex justify-content-end'>
@@ -630,7 +630,7 @@ else{
 
                           <div class='row'>
                               <div class='col w-50'>
-                              <a href='trainerBio.php?firstname=".$row['fName']."&lastname=".$row['lName']."' id='text-decoration-none'>View Profile</a>
+                              <a href='trainerBio.php?id=".$row['trainerID']."' id='text-decoration-none'>View Profile</a>
                               </div>
 
                               <div class='col d-flex justify-content-end'>

@@ -40,10 +40,10 @@
   <?php
 
   include('connect_mysql.php');
-  $trainerFirst = mysqli_real_escape_string($dbcon,$_GET['firstname']);
-  $trainerLast = mysqli_real_escape_string($dbcon,$_GET['lastname']);
+  $trainerID = mysqli_real_escape_string($dbcon,$_GET['id']);
 
-  $sql = "SELECT * FROM trainer WHERE fName='$trainerFirst' AND lName='$trainerLast'";
+
+  $sql = "SELECT * FROM trainer WHERE trainerID='$trainerID'";
   $result = mysqli_query($dbcon,$sql);
   $queryResults = mysqli_num_rows($result);
 
