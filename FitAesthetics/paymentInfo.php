@@ -89,7 +89,7 @@
 
                       <p class="goal-font-size lead">Pay with</p>
 
-                      <form>
+                      <form action="confirmPayment.php">
 
                       <div class="input-group-md mb-3" >
                       <select class="form-control form-control-md">

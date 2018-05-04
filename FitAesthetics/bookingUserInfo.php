@@ -48,6 +48,8 @@ if(isset($_SESSION['uID'])){
   $months = dateDiffInMonths($startDate,$endDate);
   $total = totalFee($fee,$months);
 
+  $_SESSION['startDate'] = $startDate;
+  $_SESSION['endDate']  = $endDate;
   $_SESSION['months'] = $months;
   $_SESSION['trainerID'] = $trainerID;
   $_SESSION['totalFee'] = $total;
