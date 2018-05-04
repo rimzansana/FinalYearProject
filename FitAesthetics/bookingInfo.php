@@ -91,13 +91,16 @@
 
                     <p class="goal-font-size lead">What is your goal?</p>
 
-                    <form action="paymentInfo.php">
+                    <form action="paymentUserInfo.php">
 
                     <div class="input-group-md mb-3" >
-                    <select class="form-control form-control-md">
-                      <option>One</option>
-                      <option>Two</option>
-                      <option>Three</option>
+                    <select name="fitnessGoal" class="form-control form-control-md" required>
+                      <option disabled selected>Select your fitness goal</option>
+                      <option>Weight Loss</option>
+                      <option>Weight Gain</option>
+                      <option>Muscle Gain</option>
+                      <option>Aerobic fitness</option>
+                      <option>Endurance</option>
                     </select>
                     </div>
 
@@ -107,10 +110,11 @@
                     <p class="goal-font-size lead">I want to train</p>
 
                     <div class="input-group mb-3 w-100 ">
-                    <select class="form-control form-control-md">
-                      <option>Four</option>
-                      <option>Five</option>
-                      <option>Six</option>
+                    <select name="frequency" class="form-control form-control-md" required>
+                      <option disabled selected>Select your frequency</option>
+                      <option>1-3 days a Week</option>
+                      <option>2-5 days a Week</option>
+                      <option>5-7 times a Week</option>
                     </select>
                     </div>
 
