@@ -48,7 +48,7 @@
     include('connect_mysql.php');
     $userID = $_SESSION['uID'];
 
-    $sqlTrainers = "SELECT trainer.fName , trainer.lName ,trainer.image , booking.totalFee , booking.startDate , booking.endDate , booking.goal
+    $sqlTrainers = "SELECT trainer.fName , trainer.lName ,trainer.image ,booking.bookingID, booking.totalFee , booking.startDate , booking.endDate , booking.goal
 
         FROM booking
         INNER JOIN trainer
@@ -129,7 +129,7 @@
                           </div>
 
                           <div class='col d-flex justify-content-end'>
-                          <button class='btn red-button-color white-text-color' data-toggle='modal' data-target='#Review'>Rate this trainer</button>
+                          <button class='btn red-button-color white-text-color' data-toggle='modal' onclick='addBookingID(".$row['bookingID'].")' data-target='#Review'>Rate this trainer</button>
                           </div>
 
                       </div>
@@ -170,6 +170,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="js/bootstrap.min.js"></script>
 
-  </script>
+    <script>
+
+    function addBookingID( bookingID ) {
+
+  $('#add-bookingID').attr('value',bookingID)
+  }
+
+    </script>
   </body>
 </html>

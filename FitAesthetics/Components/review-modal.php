@@ -20,7 +20,8 @@
             <div class="d-flex justify-content-center" id="review-modal-settings">
 
 
-              <form>
+              <form action="rate-trainer_query.php" method="POST">
+                <input name="bookingID" value="" type="hidden" class="form-control" id="add-bookingID" aria-describedby="emailHelp" placeholder="Enter email">
                 <textarea class="form-control" placeholder="Describe your experience" id="review-input"></textarea>
                 <button class="btn red-button-color white-text-color my-4 w-100" type="submit">Submit review </button>
               </form>
