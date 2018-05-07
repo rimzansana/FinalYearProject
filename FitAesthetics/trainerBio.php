@@ -248,6 +248,7 @@
 
           //Getting the trainer fee
 
+            $userID = $_SESSION['uID'];
             $trainerID = mysqli_real_escape_string($dbcon,$_GET['id']);
             $sql = "SELECT * FROM trainer WHERE trainerID='$trainerID'";
             $result = mysqli_query($dbcon,$sql);
@@ -255,6 +256,14 @@
             $row= mysqli_fetch_assoc($result);
             $trainerID = $row['trainerID'];
             $trainerFee = $row['fee'];
+
+          // Checking for booked status
+
+            $isBooked = "SELECT * FROM booking
+            WHERE booking.userID='$userID' AND booking.trainerID='$trainerID' ";
+            $result1 = mysqli_query($dbcon,$isBooked);
+            $count  = mysqli_num_rows($result1);
+
 
 
             echo "<div class='col-4 w-100' id='booking-box-settings'>
@@ -301,11 +310,20 @@
                          </div>
 
                        </div>
-                 </div>";
-                 ?>
+                 </div> ";
 
-                    <button type="submit" class="btn btn-lg btn-block btn-danger my-3">Book</button>
-                    </form>
+                 //Checking if the trainer is already booked
+
+                      if($count>0){
+                        echo "<button type='button' class='btn btn-block btn-success my-3'>You already booked this trainer</button>";
+                      }
+
+                      else{
+                        echo "<button type='submit' class='btn btn-lg btn-block btn-danger my-3'>Book</button>";
+                      }
+
+                    echo "</form>";
+                     ?>
                      <hr />
 
                     <div class="row">
