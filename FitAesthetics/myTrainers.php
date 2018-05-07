@@ -48,7 +48,7 @@
     include('connect_mysql.php');
     $userID = $_SESSION['uID'];
 
-    $sqlTrainers = "SELECT trainer.fName , trainer.lName ,trainer.image ,booking.bookingID, booking.totalFee , booking.startDate , booking.endDate , booking.goal
+    $sqlTrainers = "SELECT trainer.fName , trainer.lName ,trainer.image ,booking.bookingID, booking.totalFee , booking.startDate , booking.endDate , booking.goal ,booking.isRated
 
         FROM booking
         INNER JOIN trainer
@@ -78,7 +78,7 @@
           $start = $row['startDate'];
           $end = $row['endDate'];
           $month = dateDiffInMonths($start, $end);
-
+          $isRated = $row['isRated'];
 
       echo "<div class='container my-3 p-2'>
 
@@ -128,9 +128,19 @@
                           </div>
                           </div>
 
-                          <div class='col d-flex justify-content-end'>
-                          <button class='btn red-button-color white-text-color' data-toggle='modal' onclick='addBookingID(".$row['bookingID'].")' data-target='#Review'>Rate this trainer</button>
-                          </div>
+                          <div class='col d-flex justify-content-end'>";
+
+                          //Checking isRated logic
+
+                          if($isRated==1){
+                              echo "<button class='btn btn-danger disabled'>Feedback left</button>";
+                          }
+
+                          else{
+                            echo "<button class='btn red-button-color white-text-color' data-toggle='modal' onclick='addBookingID(".$row['bookingID'].")' data-target='#Review'>Rate this trainer</button>";
+                          }
+
+                      echo" </div>
 
                       </div>
                   </div>
@@ -158,8 +168,6 @@
      <?php
      include_once 'Components/review-modal.php';
       ?>
-
-
 
 
 
