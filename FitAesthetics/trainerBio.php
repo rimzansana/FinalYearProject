@@ -238,14 +238,14 @@
                     <img src='images/Review-icon.png' class='image-prop'/>
                     </div>
 
-                      <div class='my-5 container'>";
+                      <div class='my-3 container pb-2'>";
 
                       while($row= mysqli_fetch_assoc($trainerReviews)){
-                      echo "<p>".$row['review']."</p>
+                      echo "<p>'".$row['review']."'</p>
 
-                        <div class='row container'>
-                        <p>-</p>
-                        <p>".$row['fName']."</p>
+                        <div class='row container p-1'>
+                        <p>-&nbsp;</p>
+                        <p><strong>".$row['fName']."&nbsp;".$row['lName']."</strong></p>
                         </div>";
                             }
 
