@@ -6,7 +6,7 @@
 
         <div class="modal-header">
           <div class="column">
-                <h5 class="modal-title" id="exampleModalLongTitle">Rate and review</h5>
+                <h5 class="modal-title" id="exampleModalLongTitle">Tell us about your experience</h5>
                 <p id="italic-header"><small>Your review will be posted publicly on the site</small></p>
             </div>
 
@@ -21,8 +21,20 @@
 
 
               <form action="rate-trainer_query.php" method="POST">
+
                 <input name="bookingID" value="" type="hidden" class="form-control" id="add-bookingID" aria-describedby="emailHelp" placeholder="Enter email">
-                <textarea class="form-control" placeholder="Describe your experience" id="review-input"></textarea>
+
+                <label>How would you rate this trainer?</label>
+                <select name="userRating" class="form-control form-control-md my-1" required>
+                  <option disabled selected>Select rating</option>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                </select>
+
+                <textarea name="userReview" class="form-control my-3" placeholder="Describe your experience" id="review-input" required></textarea>
                 <button class="btn red-button-color white-text-color my-4 w-100" type="submit">Submit review </button>
               </form>
             </div>

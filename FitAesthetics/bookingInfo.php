@@ -96,9 +96,9 @@
                     <div class="input-group-md mb-3" >
                     <select name="fitnessGoal" class="form-control form-control-md" required>
                       <option disabled selected>Select your fitness goal</option>
-                      <option>Weight Loss</option>
-                      <option>Weight Gain</option>
-                      <option>Muscle Gain</option>
+                      <option>Weight loss</option>
+                      <option>Weight gain</option>
+                      <option>Muscle gain</option>
                       <option>Aerobic fitness</option>
                       <option>Endurance</option>
                     </select>
