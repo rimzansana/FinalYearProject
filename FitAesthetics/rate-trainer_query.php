@@ -10,7 +10,13 @@
 
     $insert = "INSERT INTO rating(rating, review, bookingID)
     VALUES('$rating','$review','$bookingID')";
+
+    //Updating the isRated status
+
+    $update = "UPDATE booking SET isRated='1' WHERE bookingID='$bookingID'";
+
     mysqli_query($dbcon,$insert);
+    mysqli_query($dbcon,$update);
     header('Location: myTrainers.php');
 
  ?>
