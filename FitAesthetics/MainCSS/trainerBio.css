@@ -13,7 +13,7 @@ height: 35rem !important;
 }
 
 #row-height{
-    height: 27rem !important;
+
   }
 
 .size{
@@ -35,9 +35,6 @@ width: 410em;
 
 /* Bio Body styles */
 
-#bio-body-height{
-    height: 50rem;
-}
 
 .image-prop{
     width: 4rem;

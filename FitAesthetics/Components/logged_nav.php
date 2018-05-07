@@ -1,7 +1,6 @@
 <?php
 
-session_start();
-$name=$_SESSION['name'] ;
+$name=$_SESSION['name'];
 
 echo "<!DOCTYPE html>
   <html>

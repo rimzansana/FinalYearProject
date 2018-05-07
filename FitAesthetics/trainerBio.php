@@ -129,7 +129,7 @@
 
           <!-- Bio body Component -->
 
-          <div class='trainer-bio-bio-body my-3' id='bio-body-height'>
+          <div class='trainer-bio-bio-body my-3'>
 
            <div class='container'>
            <div class='row'>
@@ -175,6 +175,21 @@
               WHERE trainer.trainerID='$trainerID'";
 
               $goalResult = mysqli_query($dbcon,$sqlGoal);
+
+              //Retrieving reviews
+
+              $trainerID = mysqli_real_escape_string($dbcon,$_GET['id']);
+              $sqlReviews= "SELECT rating.review , user.fName , user.lName
+
+                  FROM rating
+                  INNER JOIN booking
+                  ON rating.bookingID=booking.bookingID
+                  INNER JOIN user
+                  ON booking.userID=user.userID
+                  WHERE booking.trainerID='$trainerID'";
+
+
+              $trainerReviews= mysqli_query($dbcon,$sqlReviews);
 
 
               echo "
@@ -223,19 +238,23 @@
                     <img src='images/Review-icon.png' class='image-prop'/>
                     </div>
 
+                      <div class='my-5 container'>";
 
-                    <div class='my-5 container'>
-                    <p>'He asks how I am doing, demonstrates the movements for weightlifting or anything I am uncomfortable with, and pushes me to do that one extra rep! Time, money, and sweat well spent!'</p>
+                      while($row= mysqli_fetch_assoc($trainerReviews)){
+                      echo "<p>".$row['review']."</p>
 
-                    <div class='row container'>
-                    <p>-</p>
-                    <p>Rimzan Sadikeen</p>
-                    </div>
+                        <div class='row container'>
+                        <p>-</p>
+                        <p>".$row['fName']."</p>
+                        </div>";
+                            }
 
-                    </div>
-                    </div>
+                    echo"    </div>
+                        </div>
 
-              </div>";
+                  </div>";
+
+
 
 
   ?>
@@ -248,7 +267,7 @@
 
           //Getting the trainer fee
 
-            $userID = $_SESSION['uID'];
+
             $trainerID = mysqli_real_escape_string($dbcon,$_GET['id']);
             $sql = "SELECT * FROM trainer WHERE trainerID='$trainerID'";
             $result = mysqli_query($dbcon,$sql);
@@ -259,10 +278,15 @@
 
           // Checking for booked status
 
-            $isBooked = "SELECT * FROM booking
-            WHERE booking.userID='$userID' AND booking.trainerID='$trainerID' ";
-            $result1 = mysqli_query($dbcon,$isBooked);
-            $count  = mysqli_num_rows($result1);
+            if(isset($_SESSION['uID'])){
+              $userID = $_SESSION['uID'];
+              $isBooked = "SELECT * FROM booking
+              WHERE booking.userID='$userID' AND booking.trainerID='$trainerID' ";
+              $result1 = mysqli_query($dbcon,$isBooked);
+              $count  = mysqli_num_rows($result1);
+
+            }
+
 
 
 
@@ -314,6 +338,7 @@
 
                  //Checking if the trainer is already booked
 
+                   if(isset($_SESSION['uID'])){
                       if($count>0){
                         echo "<button type='button' class='btn btn-block btn-success my-3'>You already booked this trainer</button>";
                       }
@@ -321,6 +346,11 @@
                       else{
                         echo "<button type='submit' class='btn btn-lg btn-block btn-danger my-3'>Book</button>";
                       }
+                    }
+
+                    else{
+                      echo "<button type='submit' class='btn btn-lg btn-block btn-danger my-3'>Book</button>";
+                    }
 
                     echo "</form>";
                      ?>
