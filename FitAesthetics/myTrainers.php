@@ -48,7 +48,7 @@
     include('connect_mysql.php');
     $userID = $_SESSION['uID'];
 
-    $sqlTrainers = "SELECT trainer.fName , trainer.lName ,trainer.image , booking.totalFee , booking.startDate , booking.endDate
+    $sqlTrainers = "SELECT trainer.fName , trainer.lName ,trainer.image , booking.totalFee , booking.startDate , booking.endDate , booking.goal
 
         FROM booking
         INNER JOIN trainer
@@ -92,7 +92,7 @@
                       <h3 class='mb-0'>
                       <p class='text-dark'>".$row['fName']."&nbsp;".$row['lName']."</p>
                       </h3>
-                      <p class='text-muted pt-2'>Body building , Calisthenics and cardio</p>
+                      <p class='text-muted pt-2'>My goal :&nbsp;".$row['goal']."</p>
                     </div>
 
                     <div class='col'>
@@ -100,8 +100,7 @@
                       <p><strong>Training total</strong></p>
                     </div>
                       <div class='row d-flex justify-content-end'>
-                        <p>Rs.</p>
-                        <p>".$row['totalFee']."</p>
+                        <p>Rs.&nbsp;".$row['totalFee']."</p>
                       </div>
 
                     </div>
