@@ -31,10 +31,6 @@
 
     ?>
 
-
-
-
-
     <!-- Header text Component -->
 
     <div class="container my-5 pt-5">
@@ -46,159 +42,111 @@
 
     <!-- My trainers card Component -->
 
-    <div class="container my-5 p-2">
+
+    <?php
+
+    include('connect_mysql.php');
+    $userID = $_SESSION['uID'];
+
+    $sqlTrainers = "SELECT trainer.fName , trainer.lName ,trainer.image , booking.totalFee , booking.startDate , booking.endDate
+
+        FROM booking
+        INNER JOIN trainer
+        ON booking.trainerID=trainer.trainerID
+        INNER JOIN user
+        ON booking.userID=user.userID
+        WHERE user.userID='$userID'";
 
 
-            <div class="card flex-md-row mb-4 box-shadow h-md-250 w-75 p-2">
-                <img class="card-img-right flex-auto d-none d-md-block h-100" src="images/card-profile.jpg" alt="Card image cap" width="160" />
-                <div class="card-body d-flex flex-column align-items-start">
+    $myTrainers = mysqli_query($dbcon,$sqlTrainers);
 
-                <div class="row w-100">
-                  <div class="col">
-                    <h3 class="mb-0">
-                    <a class="text-dark">Lazar Angelov</a>
-                    </h3>
-                    <p class="text-muted pt-2">Body building , Calisthenics and cardio</p>
-                  </div>
+    function dateDiffInMonths($date1, $date2) {
+        $ts1 = strtotime($date1);
+        $ts2 = strtotime($date2);
 
-                  <div class="col">
-                    <div class="row  d-flex justify-content-end">
-                    <p><strong>Training total</strong></p>
-                  </div>
-                    <div class="row d-flex justify-content-end">
-                      <p>Rs.</p>
-                      <p>12000</p>
+        $year1 = date('Y', $ts1);
+        $year2 = date('Y', $ts2);
+
+        $month1 = date('n', $ts1);
+        $month2 = date('n', $ts2);
+
+        return abs((($year2 - $year1) * 12) + ($month2 - $month1));
+    };
+
+    while($row = mysqli_fetch_assoc($myTrainers)){
+
+          $start = $row['startDate'];
+          $end = $row['endDate'];
+          $month = dateDiffInMonths($start, $end);
+
+
+      echo "<div class='container my-3 p-2'>
+
+
+              <div class='card flex-md-row mb-4 box-shadow h-md-250 w-75 p-2'>
+                  <img class='card-img-right flex-auto d-none d-md-block h-100' src='".$row['image']."' alt='Card image cap' width='160' />
+                  <div class='card-body d-flex flex-column align-items-start'>
+
+                  <div class='row w-100'>
+                    <div class='col'>
+                      <h3 class='mb-0'>
+                      <p class='text-dark'>".$row['fName']."&nbsp;".$row['lName']."</p>
+                      </h3>
+                      <p class='text-muted pt-2'>Body building , Calisthenics and cardio</p>
                     </div>
 
+                    <div class='col'>
+                      <div class='row  d-flex justify-content-end'>
+                      <p><strong>Training total</strong></p>
+                    </div>
+                      <div class='row d-flex justify-content-end'>
+                        <p>Rs.</p>
+                        <p>".$row['totalFee']."</p>
+                      </div>
+
+                    </div>
                   </div>
-                </div>
 
 
+                  <div class='w-100' id='card-bottom'>
 
-                <div class="w-100" id="card-bottom">
+                      <div class='row '>
+                          <div class='col w-50'>
+                            <div class='container'>
+                            <div class='row'>
+                              <p>Hired for :</p>";
 
-                    <div class="row ">
-                        <div class="col w-50">
-                          <div class="container">
-                          <div class="row">
-                            <p>Months left :</p>
-                            <p>&nbsp;6</p>
+                              if($month==1){
+                                echo "<p>&nbsp;$month&nbsp;month </p>";
+                              }
+
+                              else{
+                                echo "<p>&nbsp;$month&nbsp;months </p>";
+                              }
+
+                          echo "
+                            </div>
                           </div>
-                        </div>
-                        </div>
-
-                        <div class="col d-flex justify-content-end">
-                        <button class="btn red-button-color white-text-color" data-toggle="modal" data-target="#Review">Rate this trainer</button>
-                        </div>
-
-                    </div>
-                </div>
-
-                </div>
-
-            </div>
-
-            <div class="card flex-md-row mb-4 box-shadow h-md-250 w-75 p-2">
-                <img class="card-img-right flex-auto d-none d-md-block h-100" src="images/card-profile.jpg" alt="Card image cap" width="160" />
-                <div class="card-body d-flex flex-column align-items-start">
-
-                <div class="row w-100">
-                  <div class="col">
-                    <h3 class="mb-0">
-                    <a class="text-dark">Lazar Angelov</a>
-                    </h3>
-                    <p class="text-muted pt-2">Body building , Calisthenics and cardio</p>
-                  </div>
-
-                  <div class="col">
-                    <div class="row  d-flex justify-content-end">
-                    <p><strong>Training total</strong></p>
-                  </div>
-                    <div class="row d-flex justify-content-end">
-                      <p>Rs.</p>
-                      <p>12000</p>
-                    </div>
-
-                  </div>
-                </div>
-
-
-
-                <div class="w-100" id="card-bottom">
-
-                    <div class="row ">
-                        <div class="col w-50">
-                          <div class="container">
-                          <div class="row">
-                            <p>Months left :</p>
-                            <p>&nbsp;6</p>
                           </div>
-                        </div>
-                        </div>
 
-                        <div class="col d-flex justify-content-end">
-                        <button class="btn red-button-color white-text-color" data-toggle="modal" data-target="#Review">Rate this trainer</button>
-                        </div>
-
-                    </div>
-                </div>
-
-                </div>
-
-            </div>
-
-            <div class="card flex-md-row mb-4 box-shadow h-md-250 w-75 p-2">
-                <img class="card-img-right flex-auto d-none d-md-block h-100" src="images/card-profile.jpg" alt="Card image cap" width="160" />
-                <div class="card-body d-flex flex-column align-items-start">
-
-                <div class="row w-100">
-                  <div class="col">
-                    <h3 class="mb-0">
-                    <a class="text-dark">Lazar Angelov</a>
-                    </h3>
-                    <p class="text-muted pt-2">Body building , Calisthenics and cardio</p>
-                  </div>
-
-                  <div class="col">
-                    <div class="row  d-flex justify-content-end">
-                    <p><strong>Training total</strong></p>
-                  </div>
-                    <div class="row d-flex justify-content-end">
-                      <p>Rs.</p>
-                      <p>12000</p>
-                    </div>
-
-                  </div>
-                </div>
-
-
-
-                <div class="w-100" id="card-bottom">
-
-                    <div class="row ">
-                        <div class="col w-50">
-                          <div class="container">
-                          <div class="row">
-                            <p>Months left :</p>
-                            <p>&nbsp;6</p>
+                          <div class='col d-flex justify-content-end'>
+                          <button class='btn red-button-color white-text-color' data-toggle='modal' data-target='#Review'>Rate this trainer</button>
                           </div>
-                        </div>
-                        </div>
 
-                        <div class="col d-flex justify-content-end">
-                        <button class="btn red-button-color white-text-color" data-toggle="modal" data-target="#Review">Rate this trainer</button>
-                        </div>
+                      </div>
+                  </div>
 
-                    </div>
-                </div>
+                  </div>
 
-                </div>
+              </div>
+      </div>";
 
-            </div>
+    }
 
+    ?>
 
 
-    </div>
+
 
     <!-- Footer Component -->
 

@@ -18,7 +18,7 @@ if(isset($_SESSION['uID'])){
 
   //Calculating the month differences
 
-  function dateDiffInMonths($date1, $date2) {
+function dateDiffInMonths($date1, $date2) {
       $ts1 = strtotime($date1);
       $ts2 = strtotime($date2);
 
