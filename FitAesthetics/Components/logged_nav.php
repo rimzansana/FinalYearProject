@@ -8,7 +8,7 @@ echo "<!DOCTYPE html>
   	<title></title>
   </head>
   <body>
-  	<nav class='navbar fixed-top navbar-expand-lg navbar-light' id='nav-container'>
+  	<nav class='navbar fixed-top navbar-expand-lg navbar-dark' id='nav-container'>
         <a class='navbar-brand white-text-color' href='home.php'>FitAesthetics.LK</a>
         <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarNavDropdown' aria-controls='navbarNavDropdown' aria-expanded='false' aria-label='Toggle navigation'>
             <span class='navbar-toggler-icon'></span>

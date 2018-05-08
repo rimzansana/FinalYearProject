@@ -50,7 +50,7 @@
                 <hr class="my-4" />
 
                 <form action="search.php" class="form-inline" method="post">
-                    <input class="form-control mr-sm-2 w-75 p-4 " type="search" placeholder="Try Colombo" aria-label="Search" id="search-input" name="search" />
+                    <input class="form-control mr-sm-2 w-75 p-4 " type="search" placeholder="Try Bambalapitiya" aria-label="Search" id="search-input" name="search" />
                     <button class="btn my-2 my-sm-0 p-3 white-text-color red-button-color " type="submit" id="search-button" name="index-search">Search</button>
                 </form>
 
