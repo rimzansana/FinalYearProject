@@ -1,3 +1,7 @@
+<html>
+<body>
+
+
 <?php
 
 session_start();
@@ -59,16 +63,24 @@ function dateDiffInMonths($date1, $date2) {
 }
 
 else {
-echo '<script language="javascript">';
-echo 'alert("Please sign in to follow the booking process")';
-echo '</script>';
-header( "refresh:0.5;url=trainerBio.php?id=".$trainerID."" );
+?>
+      <script src="js/sweetalert2.all.min.js"></script>
+      <script src="js/sweetalert2.min.js"></script>
+      <script>swal({
+      position: 'center',
+      type: 'info',
+      title: 'Please Log in to follow up with the booking process',
+      showConfirmButton: false,
+      timer: 4000
+    })</script>
+
+<?php
+
+header( "refresh:4.0;url=trainerBio.php?id=".$trainerID."" );
 exit();
 
 }
 
-
-
-
-
 ?>
+</body>
+</html>

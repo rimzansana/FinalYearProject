@@ -1,47 +1,29 @@
-<?php
+<html>
+<body>
 
-session_start();
-include('connect_mysql.php');
-$userID = $_SESSION['uID'];
-
-
-
-$sqlTrainers = "SELECT trainer.fName , trainer.lName , booking.totalFee , booking.startDate , booking.endDate
-
-    FROM booking
-    INNER JOIN trainer
-    ON booking.trainerID=trainer.trainerID
-    INNER JOIN user
-    ON booking.userID=user.userID
-    WHERE user.userID='$userID'";
-
-
-$myTrainers = mysqli_query($dbcon,$sqlTrainers);
-$row= mysqli_fetch_assoc($myTrainers);
-
-$start = $row['startDate'];
-$end = $row['endDate'];
-
-function dateDiffInMonths($date1, $date2) {
-    $ts1 = strtotime($date1);
-    $ts2 = strtotime($date2);
-
-    $year1 = date('Y', $ts1);
-    $year2 = date('Y', $ts2);
-
-    $month1 = date('n', $ts1);
-    $month2 = date('n', $ts2);
-
-    return abs((($year2 - $year1) * 12) + ($month2 - $month1));
-}
-
-$month = dateDiffInMonths($start, $end);
+  <script src="js/sweetalert2.all.min.js"></script>
+  <script src="js/sweetalert2.min.js"></script>
+  <script>swal({
+  position: 'center',
+  type: 'success',
+  allowOutsideClick: false,
+  allowEscapeKey: false,
+  title: 'Congratulations',
+  text:'Your booking was successfully placed',
+  showConfirmButton: false,
+  timer: 3800
+})</script>
 
 
-echo $row['fName'];
-echo $row['lName'];
-echo $row['totalFee'];
-echo $month;
 
 
-?>
+
+  <?php
+
+  header( "refresh:3.8;url=home.php" );
+  ?>
+
+
+
+</body>
+</html>

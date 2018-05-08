@@ -1,3 +1,7 @@
+<html>
+<body>
+
+
 <?php
 
 if(isset($_POST['submitted'])){
@@ -26,8 +30,23 @@ if(isset($_POST['submitted'])){
 
 
 		if($count==0) {
-			$message = "<p>Incorrect username or password! Please try again :)</p>";
-			echo $message;
+
+    ?>
+
+    <script src="js/sweetalert2.all.min.js"></script>
+    <script src="js/sweetalert2.min.js"></script>
+    <script>swal({
+    position: 'center',
+    type: 'error',
+    title: 'Oops',
+    text:'Please recheck your log in credentials',
+    showConfirmButton: false,
+    timer: 3000
+    })</script>
+
+
+    <?php
+
       header( "refresh:2;url=index.php" );
       exit();
 
@@ -42,3 +61,6 @@ if(isset($_POST['submitted'])){
 	}
 
 ?>
+
+</html>
+</body>
