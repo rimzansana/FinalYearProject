@@ -344,7 +344,18 @@
                       }
 
                       else{
-                        echo "<button type='submit' class='btn btn-lg btn-block btn-danger my-3'>Book</button>";
+
+                        if($_SESSION['isZero']==false){
+                          echo "<button type='submit' class='btn btn-lg btn-block btn-danger my-3'>Book</button>";
+                        }
+
+                        else{
+
+                          echo "<button type='submit' class='btn btn-lg btn-block btn-danger my-3' data-toggle='popover' title='Oops'data-placement='right'   data-content='Bookings are only allowed from 1 month upwards'>Book</button>";
+                          $_SESSION['isZero']=false;
+
+                        }
+
                       }
                     }
 
@@ -416,8 +427,15 @@
     <script src="js/bootstrap.min.js"></script>
 	  <script type="text/javascript" src="js/jquery.min.js"></script>
 	  <script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
 
 
+
+    <script>
+
+    $('[data-toggle="popover"]').popover('show');
+
+    </script>
 
 
     <script type="text/javascript">

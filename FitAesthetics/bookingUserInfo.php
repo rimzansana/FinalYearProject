@@ -48,18 +48,30 @@ function dateDiffInMonths($date1, $date2) {
   }
 
 
-
   $months = dateDiffInMonths($startDate,$endDate);
-  $total = totalFee($fee,$months);
 
-  $_SESSION['startDate'] = $startDate;
-  $_SESSION['endDate']  = $endDate;
-  $_SESSION['months'] = $months;
-  $_SESSION['trainerID'] = $trainerID;
-  $_SESSION['totalFee'] = $total;
+  if($months==0){
+
+    $_SESSION['isZero']=true;
+    header( "refresh:0.2;url=trainerBio.php?id=".$trainerID."" );
+
+  }
+
+  else{
+    $total = totalFee($fee,$months);
+    
+    $_SESSION['startDate'] = $startDate;
+    $_SESSION['endDate']  = $endDate;
+    $_SESSION['months'] = $months;
+    $_SESSION['trainerID'] = $trainerID;
+    $_SESSION['totalFee'] = $total;
 
 
-  header('Location: bookingInfo.php');
+    header('Location: bookingInfo.php');
+  }
+
+
+
 }
 
 else {

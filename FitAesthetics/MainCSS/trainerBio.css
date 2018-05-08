@@ -56,6 +56,10 @@ width: 410em;
 
 }
 
+.popover-header{
+  font-size: 1.2rem !important;
+  background-color: #bdbebf !important;
+}
 
 .datepicker{
 	width: 180px; margin: 0 20px 20px 20px;
