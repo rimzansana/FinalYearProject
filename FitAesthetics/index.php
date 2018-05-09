@@ -133,61 +133,90 @@
 
         <div class="carousel-inner" id="slider-container">
 
-          <div class="carousel-item active">
-                <div class="d-flex justify-content-center">
-                    <img src="images/Profile-1.jpg" alt="Picture one" class="rounded-circle review-picture-settings" />
+          <?php
+
+          $sqlReviews= "SELECT rating.review , user.fName , user.lName
+
+              FROM rating
+              INNER JOIN booking
+              ON rating.bookingID=booking.bookingID
+              INNER JOIN user
+              ON booking.userID=user.userID
+              ORDER BY RAND()
+              LIMIT 3";
+
+          $trainerReviews= mysqli_query($dbcon,$sqlReviews);
+          $fNames = array();
+          $lNames = array();
+          $reviews = array();
+
+
+         while($row= mysqli_fetch_assoc($trainerReviews)){
+           $fNames[] = $row['fName'];
+           $lNames[] = $row['lName'];
+           $reviews[] = $row['review'];
+         }
+
+
+
+
+        echo "<div class='carousel-item active'>
+                <div class='d-flex justify-content-center'>
+                    <img src='images/Profile-1.jpg' alt='Picture one' class='rounded-circle review-picture-settings' />
                 </div>
 
                 <div>
-                    <h5 class="d-flex justify-content-center my-3">Rimzan Sadikeen</h5>
-                    <p class="d-flex justify-content-center mb-5">Colombo</p>
+                    <h5 class='d-flex justify-content-center my-3'>$fNames[0]&nbsp;$lNames[0]</h5>
+                    <p class='d-flex justify-content-center mb-5'>Colombo</p>
                     <br />
                 </div>
 
-                <div class="d-flex justify-content-center ml-3 mr-2">
-                    <div class="review-text-div">
-                        <p class="text-center">"He asks how I am doing, demonstrates the movements for weightlifting or anything I am uncomfortable with, and pushes me to do that one extra rep! Time, money, and sweat well spent!"</p>
+                <div class='d-flex justify-content-center ml-3 mr-2'>
+                    <div class='review-text-div'>
+                        <p class='text-center'>$reviews[0]</p>
                     </div>
                 </div>
           </div>
 
 
 
-          <div class="carousel-item">
-                <div class="d-flex justify-content-center">
-                    <img src="images/Profile-2.jpg" alt="Picture one" class="rounded-circle review-picture-settings"  />
+          <div class='carousel-item'>
+                <div class='d-flex justify-content-center'>
+                    <img src='images/Profile-2.jpg' alt='Picture one' class='rounded-circle review-picture-settings'  />
                 </div>
 
                 <div>
-                    <h5 class="d-flex justify-content-center my-3">Rimzan Sadikeen</h5>
-                    <p class="d-flex justify-content-center mb-5">Colombo</p>
+                    <h5 class='d-flex justify-content-center my-3'>$fNames[1]&nbsp;$lNames[1]</h5>
+                    <p class='d-flex justify-content-center mb-5'>Colombo</p>
                     <br />
                 </div>
 
-                <div class="d-flex justify-content-center ml-3 mr-2">
-                    <div class="review-text-div">
-                        <p class="text-center">"He asks how I am doing, demonstrates the movements for weightlifting or anything I am uncomfortable with, and pushes me to do that one extra rep! Time, money, and sweat well spent!"</p>
+                <div class='d-flex justify-content-center ml-3 mr-2'>
+                    <div class='review-text-div'>
+                        <p class='text-center'>$reviews[1]</p>
                     </div>
                 </div>
           </div>
 
-          <div class="carousel-item">
-                <div class="d-flex justify-content-center">
-                    <img src="images/Profile-3.jpg" alt="Picture one" class="rounded-circle review-picture-settings" />
+          <div class='carousel-item'>
+                <div class='d-flex justify-content-center'>
+                    <img src='images/Profile-3.jpg' alt='Picture one' class='rounded-circle review-picture-settings' />
                 </div>
 
                 <div>
-                    <h5 class="d-flex justify-content-center my-3">Rimzan Sadikeen</h5>
-                    <p class="d-flex justify-content-center mb-5">Colombo</p>
+                    <h5 class='d-flex justify-content-center my-3'>$fNames[2]&nbsp;$lNames[2]</h5>
+                    <p class='d-flex justify-content-center mb-5'>Colombo</p>
                     <br />
                 </div>
 
-                <div class="d-flex justify-content-center ml-3 mr-2">
-                    <div class="review-text-div">
-                        <p class="text-center">"He asks how I am doing, demonstrates the movements for weightlifting or anything I am uncomfortable with, and pushes me to do that one extra rep! Time, money, and sweat well spent!"</p>
+                <div class='d-flex justify-content-center ml-3 mr-2'>
+                    <div class='review-text-div'>
+                        <p class='text-center'>$reviews[2]</p>
                     </div>
                 </div>
-          </div>
+          </div>";
+
+          ?>
 
         </div>
 
