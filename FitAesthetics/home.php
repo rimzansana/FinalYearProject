@@ -70,41 +70,31 @@
 
         <div class="card-deck text-center">
 
-            <div class="card mb-4 box-shadow">
-                <div class="card-body">
-                    <img class="rounded-circle" src="images/Profile-1.jpg" alt="Image1" width="140" height="140" />
-                    <h2 class="my-4">Ulisess Jr</h2>
-                    <p>Ulisses Jr is one of the most sought after and highly respected bodybuilding and body composition coaches in the World.</p>
-                </div>
+          <?php
 
-                <div class="w-100 mb-5">
-                    <button type="button" class="btn btn-lg btn-outline-danger w-75 ">View Profile</button>
-                </div>
-            </div>
+            include('connect_mysql.php');
 
-            <div class="card mb-4 box-shadow">
-                <div class="card-body">
-                    <img class="rounded-circle" src="images/Profile-2.jpg" alt="Image1" width="140" height="140" />
-                    <h2 class="my-4">Ulisess Jr</h2>
-                    <p>Ulisses Jr is one of the most sought after and highly respected bodybuilding and body composition coaches in the World.</p>
-                </div>
+            $sql = "SELECT trainer.trainerID,trainer.fName, trainer.lName,trainer.image, LEFT(trainer.bio, 130) AS bio FROM trainer WHERE rating>=4 ORDER BY RAND()
+            LIMIT 3";
+            $featuredTrainers = mysqli_query($dbcon,$sql);
 
-                <div class="w-100 mb-5">
-                    <button type="button" class="btn btn-lg btn-outline-danger w-75 ">View Profile</button>
-                </div>
-            </div>
+            while($row= mysqli_fetch_assoc($featuredTrainers)){
 
-            <div class="card mb-4 box-shadow">
-                <div class="card-body">
-                    <img class="rounded-circle" src="images/Profile-3.jpg" alt="Image1" width="140" height="140" />
-                    <h2 class="my-4">Ulisess Jr</h2>
-                    <p>Ulisses Jr is one of the most sought after and highly respected bodybuilding and body composition coaches in the World.</p>
-                </div>
+              echo "<div class='card mb-4 box-shadow'>
+                  <div class='card-body'>
+                      <img class='rounded-circle' src='".$row['image']."' alt='trainer-Image' width='140' height='140' />
+                      <h2 class='my-4'>".$row['fName']."&nbsp;".$row['lName']."</h2>
+                      <p>".$row['bio']."<strong>...</strong></p>
 
-                <div class="w-100 mb-5">
-                    <button type="button" class="btn btn-lg btn-outline-danger w-75 ">View Profile</button>
-                </div>
-            </div>
+                  </div>
+
+                  <div class='w-100 mb-5'>
+                    <a href='trainerBio.php?id=".$row['trainerID']."' id='text-decoration-none'><button type='button' class='btn btn-lg btn-outline-danger w-75' >View Profile</button> </a>
+                  </div>
+              </div>";
+            }
+
+             ?>    
 
         </div>
         </div>
