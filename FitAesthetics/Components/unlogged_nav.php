@@ -6,7 +6,9 @@
   <body>
 
   	<nav class="navbar fixed-top navbar-expand-lg navbar-light" id="nav-container">
-        <a class="navbar-brand white-text-color" href="index.php">FitAesthetics.LK</a>
+        <a class="navbar-brand" href="index.php">
+          <img src='images/Logo-White.png' alt='Logo' width='70' height='60' />
+        </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>

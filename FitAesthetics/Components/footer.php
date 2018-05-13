@@ -6,17 +6,19 @@
               <div class="row">
 
                 <div class="col-12 col-md">
-                  <div id="info-text-settings">
+
+
+                  <div>
+                      <img src='images/Colored-Logo.png' alt='Logo' width='100' height='100' />
+                  </div>
+
+                  <div id="info-text-settings" class="my-3">
                       <img src="images/mail.png" width="24" height="24"></img>
                       <p class="ml-2">info@fitaesthetics.com</p>
                   </div>
-
-                  <div class="my-4">
-                      <p>INSERT LOG HERE </p>
-                  </div>
                 </div>
 
-                <div class="col-6 col-md">
+                <div class="col-6 col-md my-2">
                   <h5>FitAesthetics</h5>
                   <ul class="list-unstyled text-small">
                       <li><a class="text-muted" href="#">Careers</a></li>
@@ -26,7 +28,7 @@
                    </ul>
                 </div>
 
-                <div class="col-6 col-md">
+                <div class="col-6 col-md my-2">
                   <h5>About</h5>
                     <ul class="list-unstyled text-small">
                         <li><a class="text-muted" href="#">Our Team</a></li>
