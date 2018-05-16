@@ -50,7 +50,8 @@
     include('connect_mysql.php');
     $userID = $_SESSION['uID'];
 
-    $sqlTrainers = "SELECT trainer.fName , trainer.lName ,trainer.image ,booking.bookingID, booking.totalFee , booking.startDate , booking.endDate , booking.goal ,booking.isRated
+
+    $sqlTrainers = "SELECT trainer.trainerID,trainer.fName , trainer.lName ,trainer.image ,booking.bookingID, booking.totalFee , booking.startDate , booking.endDate , booking.goal ,booking.isRated
 
         FROM booking
         INNER JOIN trainer
@@ -91,8 +92,10 @@
 
                   <div class='row w-100'>
                     <div class='col'>
-                      <h3 class='mb-0'>
+                      <h3 class='mb-0'><a href='trainerBio.php?id=".$row['trainerID']."' id='text-decoration-none'>
                       <p class='text-dark'>".$row['fName']."&nbsp;".$row['lName']."</p>
+                      </a>
+
                       </h3>
                       <p class='text-muted pt-2'>My goal :&nbsp;".$row['goal']."</p>
                     </div>
