@@ -60,11 +60,18 @@
              City <span class="caret"></span>
             </button>
 
+            <form action="./search.php" method="post">
+            <input type = "hidden" name = "filter1-button" value = "true" />
+
              <ul id="filter1" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-               <li> <a class="dropdown-item" href="#">Colombo</a></li>
-               <li><a class="dropdown-item" href="#">Kolpity</a><li>
-               <li> <a class="dropdown-item" href="#">Nugegoda</a><li>
-               <li> <a class="dropdown-item" href="#">Dehiwala</a><li>
+               <li><a class="dropdown-item" href="#"><button class="btn" type="submit" value="Kolpity" name="Kolpity">Kolpity</button></a></li>
+               <li><a class="dropdown-item" href="#"><button class="btn" type="submit" value="Nugegoda" name="Nugegoda">Nugegoda</button></a></li>
+               <li><a class="dropdown-item" href="#"><button class="btn" type="submit" value="Bambalapitiya" name="Bambalapitiya">Bambalapitiya</button></a></li>
+               <li><a class="dropdown-item" href="#"><button class="btn" type="submit" value="Borella" name="Borella">Borella</button></a></li>
+               <li><a class="dropdown-item" href="#"><button class="btn" type="submit" value="Pannipitiye" name="Pannipitiye">Pannipitiye</button></a></li>
+
+            </ul>
+            </form>
 
              </div>
         </div>
