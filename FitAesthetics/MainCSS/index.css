@@ -8,7 +8,7 @@ body{
 
 #nav-container{
     background-color: #37474F;
-    min-height: 5rem;
+    height: 5rem;
     box-shadow: 0 0.01rem 0.5rem;
 }
 
@@ -34,6 +34,7 @@ body{
 #search-button{
     height: 3.7rem;
     width: 6rem;
+    font-size: 1.2rem;
 }
 
 /* Trainer sign up styling */
