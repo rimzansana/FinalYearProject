@@ -394,7 +394,14 @@ else if(isset($_POST['index-search'])){
   }}
 
   else{
-    
+
+    echo "<div class='alert alert-danger alert-dismissible fade show w-100' role='alert'>
+    <strong>Holy guacamole we couldnt find a match :(</strong> &nbsp;&nbsp;Check out these featured trainers below.
+    <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
+      <span aria-hidden='true'>&times;</span>
+    </button>
+    </div>";
+
           $sql = "SELECT * FROM trainer";
           $result = mysqli_query($dbcon,$sql);
           $queryResults = mysqli_num_rows($result);
