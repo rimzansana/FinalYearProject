@@ -28,7 +28,7 @@
                <div class="invalid-feedback">
                 Please Fill in your last name.
                </div>
-               <input type="password" class="form-control my-2"  placeholder="Password" name="pass" minlength=10 maxlength=25 required />
+               <input type="password" class="form-control my-2"  placeholder="Password" name="pass" minlength=10 maxlength=15 required />
                <div class="invalid-feedback">
                 Please provide a password.
                </div>

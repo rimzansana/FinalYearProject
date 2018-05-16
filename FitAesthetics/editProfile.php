@@ -98,10 +98,10 @@
                   </div>
 
                   <div class='form-group row pt-4'>
-                  <label for='password' class='col-sm-2 col-form-label'>Password</label>
+                  <label for='password' class='col-sm-2 col-form-label'>New password</label>
                   <div class='col-sm-10'>
-                  <input name='password' type='password' class='form-control' id='password' placeholder='' value='' maxlength='10''>
-                  <small class='text-muted'>Type in a new password or leave it empty</small>
+                  <input name='password' type='password' class='form-control' id='password' placeholder='' value='' maxlength='15''>
+                  <small class='text-muted'>Limit to 15 characters</small>
                   </div>
                   </div>
 

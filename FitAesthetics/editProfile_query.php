@@ -16,7 +16,13 @@ if (isset($_POST['update-button'])){
   $address = mysqli_real_escape_string($dbcon, $_POST['address']);
 
 
-  $update = "UPDATE user SET fName='$firstname', lName='$lastname',dob='$date', gender='$gender' , email='$email', password='$password', telno='$telno', address='$address' WHERE userID='$user'";
+  if($password==null){
+    $update = "UPDATE user SET fName='$firstname', lName='$lastname',dob='$date', gender='$gender' , email='$email', telno='$telno', address='$address' WHERE userID='$user'";
+  }
+
+  else{
+    $update = "UPDATE user SET fName='$firstname', lName='$lastname',dob='$date', gender='$gender' , email='$email', password='$password', telno='$telno', address='$address' WHERE userID='$user'";
+  }
 
   mysqli_query($dbcon,$update);
   header( "refresh:1;url=editProfile.php" );
