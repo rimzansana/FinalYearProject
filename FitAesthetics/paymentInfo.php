@@ -104,21 +104,21 @@
 
                       <p class="goal-font-size lead my-5">Name on the card</p>
                       <div class="input-group-md mb-3" >
-                      <input type="text" class="form-control" placeholder="Type your name here">
+                      <input type="text" class="form-control" placeholder="Type your name here" required>
                       </div>
 
                       <p class="goal-font-size lead my-5">Card Info</p>
 
                       <div class="input-group-md mb-3" >
-                      <input type="text" class="form-control" placeholder="Card number">
+                      <input type="text" class="form-control" placeholder="Card number" required>
                       </div>
                       <div class="input-group-md mb-3" >
                       <div class="row">
                         <div class="col">
-                        <input type="text" class="form-control " placeholder="Expiration date mm/yy">
+                        <input type="text" class="form-control " placeholder="Expiration date mm/yy" required>
                         </div>
                         <div class="col">
-                        <input type="text" class="form-control " placeholder="CVV">
+                        <input type="text" class="form-control " placeholder="CVV" required>
                         </div>
 
 
@@ -126,7 +126,19 @@
 
                       </div>
 
-                      <button type="submit" class="btn my-5 w-50 white-text-color red-button-color">Confirm and pay</button>
+                      <div class="form-group my-5">
+                      <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                      <label class="form-check-label" for="invalidCheck">
+                      I agree to subscription terms and conditions of FitAesthetics
+                      </label>
+                      <div class="invalid-feedback">
+                      You must agree before submitting.
+                      </div>
+                      </div>
+                      </div>
+
+                      <button type="submit" class="btn my-3 w-50 white-text-color red-button-color">Confirm and pay</button>
 
                     </form>
 

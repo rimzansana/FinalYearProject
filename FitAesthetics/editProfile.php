@@ -78,7 +78,7 @@
                   <label for='dob' class='col-sm-2 col-form-label'>Birth Date</label>
                   <div class='col-sm-10'>
                   <input name='birth' type='text' class='form-control' id='dob' placeholder='' value='".$row['dob']."'>
-                  <small class='text-muted'>Please make sure the format is 'YYYY-MM-DD'</small>
+                  <small class='text-muted'>Please make sure the format of the Date is 'YYYY-MM-DD'</small>
                   </div>
                   </div>
 
@@ -101,7 +101,7 @@
                   <label for='password' class='col-sm-2 col-form-label'>New password</label>
                   <div class='col-sm-10'>
                   <input name='password' type='password' class='form-control' id='password' placeholder='' value='' maxlength='15''>
-                  <small class='text-muted'>Limit to 15 characters</small>
+                  <small class='text-muted'>Your password must be 15 characters long</small>
                   </div>
                   </div>
 
