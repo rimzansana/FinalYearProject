@@ -12,7 +12,9 @@
 
     <link rel="stylesheet" href="MainCSS/main.css">
 
-    <title>FitAesthetics</title>
+    <title>Confirm your payment</title>
+
+    <link href="images/Trophy-icon.png" rel="icon" type="image/png" />
 
   </head>
   <body>

@@ -16,6 +16,8 @@
 
     <title>FitAesthetics</title>
 
+    <link href="images/Trophy-icon.png" rel="icon" type="image/png" />
+
   </head>
   <body>
 

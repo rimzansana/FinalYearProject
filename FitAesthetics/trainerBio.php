@@ -13,7 +13,9 @@
     <link rel="stylesheet" type="text/css" href="MainCSS/main.css">
     <link rel="stylesheet" type="text/css" href="css/datepicker.css">
 
-    <title>FitAesthetics</title>
+    <title>Trainer Bio</title>
+
+    <link href="images/Trophy-icon.png" rel="icon" type="image/png" />
 
   </head>
   <body>
