@@ -94,7 +94,7 @@
 
     echo "<div class='container my-5 pt-5'>
 
-               <div class='row d-flex align-items-center' id='row-height'>
+               <div class='row d-flex align-items-center my-5' id='row-height'>
 
                    <div class='col-sm'>
                       <div class='bio-profile-picture' id='profile-picture'>
@@ -139,7 +139,7 @@
 
                     <!--  Bio text Component -->
 
-                    <p class='lead'>".$row['bio']."</p>
+                    <p class='lead pb-3'>".$row['bio']."</p>
                     <hr />";
           }
         }
@@ -297,7 +297,7 @@
 
             echo "<div class='col-4 w-100' id='booking-box-settings'>
 
-                <div class='container d-flex justify-content-center' id='sticky'>
+                <div class='container d-flex justify-content-center ml-5' id='sticky'>
                 <div class='card-deck mb-3 text-center'>
                 <div class='card mb-4 box-shadow'>
 
