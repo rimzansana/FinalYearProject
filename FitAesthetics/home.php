@@ -163,7 +163,7 @@
 
         echo "<div class='carousel-item active'>
                 <div class='d-flex justify-content-center'>
-                    <img src='images/Profile-1.jpg' alt='Picture one' class='rounded-circle review-picture-settings' />
+                    <img src='images/User.png' alt='Picture one' class='rounded-circle review-picture-settings' />
                 </div>
 
                 <div>
@@ -183,7 +183,7 @@
 
           <div class='carousel-item'>
                 <div class='d-flex justify-content-center'>
-                    <img src='images/Profile-2.jpg' alt='Picture one' class='rounded-circle review-picture-settings'  />
+                    <img src='images/User.png' alt='Picture one' class='rounded-circle review-picture-settings'  />
                 </div>
 
                 <div>
@@ -201,7 +201,7 @@
 
           <div class='carousel-item'>
                 <div class='d-flex justify-content-center'>
-                    <img src='images/Profile-3.jpg' alt='Picture one' class='rounded-circle review-picture-settings' />
+                    <img src='images/User.png' alt='Picture one' class='rounded-circle review-picture-settings' />
                 </div>
 
                 <div>
