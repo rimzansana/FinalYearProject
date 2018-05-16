@@ -9,7 +9,7 @@
 
 
                   <div>
-                      <img src='images/Colored-Logo.png' alt='Logo' width='100' height='100' />
+                      <img src="images/Colored-Logo.png" alt="Logo" width="100" height="100" />
                   </div>
 
                   <div id="info-text-settings" class="my-3">
