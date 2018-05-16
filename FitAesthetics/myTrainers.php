@@ -36,7 +36,7 @@
     <!-- Header text Component -->
 
     <div class="container my-5 pt-5">
-      <div class="row">
+      <div class="row my-5">
       <h2>My trainers</h2>
       <p id="italic-settings" class="p-2"><i>&nbsp;&nbsp;Tell us what you think </i></p>
       </div>
