@@ -100,7 +100,7 @@
                   <div class='form-group row pt-4'>
                   <label for='password' class='col-sm-2 col-form-label'>New password</label>
                   <div class='col-sm-10'>
-                  <input name='password' type='password' class='form-control' id='password' placeholder='' value='' maxlength='15''>
+                  <input name='password' type='password' class='form-control' id='password' placeholder='' value='' maxlength='15'>
                   <small class='text-muted'>Your password must be 15 characters long</small>
                   </div>
                   </div>
@@ -108,7 +108,7 @@
                   <div class='form-group row pt-4'>
                   <label for='phone' class='col-sm-2 col-form-label'>Phone Number</label>
                   <div class='col-sm-10'>
-                  <input name='telno' type='text' class='form-control' id='phone' placeholder='' value='".$row['telno']."'>
+                  <input name='telno' type='text' maxlength='10' class='form-control' id='phone' placeholder='' value='".$row['telno']."'>
                   </div>
                   </div>
 

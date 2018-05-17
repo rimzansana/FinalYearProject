@@ -1,3 +1,29 @@
+<html>
+<body>
+
+  <script src="js/sweetalert2.all.min.js"></script>
+  <script src="js/sweetalert2.min.js"></script>
+  <script>
+
+  swal({
+  title: 'Welcome to FitAesthetics!',
+  text: 'Let them gains begin 💪',
+  timer: 5000,
+  allowOutsideClick: false,
+  allowEscapeKey: false,
+  onOpen: () => {
+  swal.showLoading()
+  }
+  }).then((result) => {
+    if (
+  // Read more about handling dismissals
+  result.dismiss === swal.DismissReason.timer
+  ) {
+  console.log('I was closed by the timer')
+  }
+  })
+  </script>
+
 <?php
 
 if (isset($_POST['signup-button'])){
@@ -28,9 +54,9 @@ if (isset($_POST['signup-button'])){
   $_SESSION['uID'] = $user;
   $_SESSION['name'] = $name;
 
-  header('Location: home.php');
+  header( "refresh:5.0;url=home.php" );
   exit();
-}
+  }
 
 else{
   header("Location: index.php");
@@ -38,3 +64,6 @@ else{
 }
 
 ?>
+
+</body>
+</html>
