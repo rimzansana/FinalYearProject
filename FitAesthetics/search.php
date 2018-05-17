@@ -118,11 +118,16 @@
              Sort By <span class="caret"></span>
             </button>
 
-             <ul id="filter4" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-               <li> <a class="dropdown-item" href="#">Highest price</a></li>
-               <li><a class="dropdown-item" href="#">Lowest price</a><li>
-               <li> <a class="dropdown-item" href="#">Rating</a><li>
+            <form action="search.php" method="post">
+            <input type = "hidden" name = "filter4-button" value = "true" />
 
+             <ul id="filter4" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+               <li><a class="dropdown-item" href="#"><button class="btn" type="submit" value="Highest" name="hPrice">Highest Price</button></a></li>
+               <li><a class="dropdown-item" href="#"><button class="btn" type="submit" value="Lowest" name="lPrice">Lowest Price</button></a></li>
+               <li><a class="dropdown-item" href="#"><button class="btn" type="submit" value="Rating" name="hRating">Highest Rating</button></a></li>
+               <li><a class="dropdown-item" href="#"><button class="btn" type="submit" value="Rating" name="lRating">Lowest Rating</button></a></li>
+            </ul>
+          </form>
              </div>
         </div>
 
