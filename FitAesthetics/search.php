@@ -60,7 +60,7 @@
              City <span class="caret"></span>
             </button>
 
-            <form action="./search.php" method="post">
+            <form action="search.php" method="post">
             <input type = "hidden" name = "filter1-button" value = "true" />
 
              <ul id="filter1" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -83,6 +83,8 @@
              Goal <span class="caret"></span>
             </button>
 
+
+
              <ul id="filter2" class="dropdown-menu sure" aria-labelledby="dropdownMenuButton">
                <li> <a class="dropdown-item" href="#">Muscle gain</a></li>
                <li><a class="dropdown-item" href="#">Weight loss</a><li>
@@ -98,10 +100,13 @@
              Gender <span class="caret"></span>
             </button>
 
+            <form action="search.php" method="post">
+            <input type = "hidden" name = "filter3-button" value = "true" />
              <ul id="filter3" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-               <li> <a class="dropdown-item" href="#">Male</a></li>
-               <li><a class="dropdown-item" href="#">Female</a><li>
-
+               <li><a class="dropdown-item" href="#"><button class="btn" type="submit" value="Male" name="Male">Male</button></a></li>
+               <li><a class="dropdown-item" href="#"><button class="btn" type="submit" value="Female" name="Female">Female</button></a></li>
+            </ul>
+          </form>
 
              </div>
         </div>
