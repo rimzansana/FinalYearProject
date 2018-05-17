@@ -83,13 +83,20 @@
              Goal <span class="caret"></span>
             </button>
 
+            <form action="search.php" method="post">
+            <input type = "hidden" name = "filter2-button" value = "true" />
 
 
              <ul id="filter2" class="dropdown-menu sure" aria-labelledby="dropdownMenuButton">
-               <li> <a class="dropdown-item" href="#">Muscle gain</a></li>
-               <li><a class="dropdown-item" href="#">Weight loss</a><li>
-               <li> <a class="dropdown-item" href="#">Fat loss</a><li>
+               <li><a class="dropdown-item" href="#"><button class="btn" type="submit" value="Weight loss" name="weightLoss">Weight Loss</button></a></li>
+               <li><a class="dropdown-item" href="#"><button class="btn" type="submit" value="Muscle gain" name="muscleGain">Muscle Gain</button></a></li>
+               <li><a class="dropdown-item" href="#"><button class="btn" type="submit" value="Toning" name="toning">Toning</button></a></li>
+               <li><a class="dropdown-item" href="#"><button class="btn" type="submit" value="Endurance" name="endurance">Endurance</button></a></li>
+               <li><a class="dropdown-item" href="#"><button class="btn" type="submit" value="Nutrition" name="nutrition">Nutrition</button></a></li>
 
+
+            </ul>
+          </form>
              </div>
         </div>
 
